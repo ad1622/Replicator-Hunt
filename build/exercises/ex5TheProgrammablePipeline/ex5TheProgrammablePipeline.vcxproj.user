@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+	<LocalDebuggerWorkingDirectory>D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/exercises/ex5TheProgrammablePipeline</LocalDebuggerWorkingDirectory>
+	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+	<LocalDebuggerCommandArguments></LocalDebuggerCommandArguments>
+	<LocalDebuggerEnvironment>PATH=D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\freeglut-2.8.1\bin;D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\DevIL-1.7.8\bin</LocalDebuggerEnvironment>
+</PropertyGroup>
+<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+	<LocalDebuggerWorkingDirectory>D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/exercises/ex5TheProgrammablePipeline</LocalDebuggerWorkingDirectory>
+	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+	<LocalDebuggerCommandArguments></LocalDebuggerCommandArguments>
+	<LocalDebuggerEnvironment>PATH=D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\freeglut-2.8.1\bin;D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\DevIL-1.7.8\bin</LocalDebuggerEnvironment>
+</PropertyGroup>
+<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+	<LocalDebuggerWorkingDirectory>D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/exercises/ex5TheProgrammablePipeline</LocalDebuggerWorkingDirectory>
+	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+	<LocalDebuggerCommandArguments></LocalDebuggerCommandArguments>
+	<LocalDebuggerEnvironment>PATH=D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\freeglut-2.8.1\bin;D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\DevIL-1.7.8\bin</LocalDebuggerEnvironment>
+</PropertyGroup>
+<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+<LocalDebuggerWorkingDirectory>D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/exercises/ex5TheProgrammablePipeline</LocalDebuggerWorkingDirectory>
+	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+	<LocalDebuggerCommandArguments></LocalDebuggerCommandArguments>
+	<LocalDebuggerEnvironment>PATH=D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\freeglut-2.8.1\bin;D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\DevIL-1.7.8\bin</LocalDebuggerEnvironment>
+</PropertyGroup>
+</Project>

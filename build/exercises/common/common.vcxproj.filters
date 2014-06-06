@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\exercises\common\oogl\DisplayList.cpp">
+      <Filter>oogl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\exercises\common\oogl\FrameBufferObject.cpp">
+      <Filter>oogl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\exercises\common\oogl\GLSLProgram.cpp">
+      <Filter>oogl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\exercises\common\oogl\GLSLShader.cpp">
+      <Filter>oogl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\exercises\common\oogl\gl_error.cpp">
+      <Filter>oogl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\exercises\common\oogl\Image.cpp">
+      <Filter>oogl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\exercises\common\oogl\model\Model3ds.cpp">
+      <Filter>oogl\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\exercises\common\oogl\model\ModelObj.cpp">
+      <Filter>oogl\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\exercises\common\oogl\Model.cpp">
+      <Filter>oogl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\exercises\common\oogl\Navigator.cpp">
+      <Filter>oogl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\exercises\common\oogl\Texture.cpp">
+      <Filter>oogl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\exercises\common\oogl\Texture2D.cpp">
+      <Filter>oogl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\exercises\common\oogl\Texture3D.cpp">
+      <Filter>oogl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\exercises\common\oogl\timer.cpp">
+      <Filter>oogl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\exercises\common\utils\timer.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\exercises\common\oogl\DisplayList.h">
+      <Filter>oogl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\oogl\FrameBufferObject.h">
+      <Filter>oogl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\oogl\glIncludes.h">
+      <Filter>oogl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\oogl\GLSLProgram.h">
+      <Filter>oogl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\oogl\GLSLShader.h">
+      <Filter>oogl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\oogl\glutIncludes.h">
+      <Filter>oogl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\oogl\gl_error.h">
+      <Filter>oogl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\oogl\Image.h">
+      <Filter>oogl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\oogl\model\Model3ds.h">
+      <Filter>oogl\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\oogl\model\ModelObj.h">
+      <Filter>oogl\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\oogl\Model.h">
+      <Filter>oogl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\oogl\Navigator.h">
+      <Filter>oogl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\oogl\Texture.h">
+      <Filter>oogl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\oogl\Texture2D.h">
+      <Filter>oogl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\oogl\Texture3D.h">
+      <Filter>oogl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\oogl\timer.h">
+      <Filter>oogl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\utils\log.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\utils\loglevels.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\exercises\common\utils\timer.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\exercises\common\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="oogl\model">
+      <UniqueIdentifier>{2AEAC708-EA5D-49CD-97AD-371E3CE7D8D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="oogl">
+      <UniqueIdentifier>{31BFB088-9A71-4493-B09F-91427C151BFA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{C53CA105-EC87-4AAF-9F21-75AFF77F7513}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

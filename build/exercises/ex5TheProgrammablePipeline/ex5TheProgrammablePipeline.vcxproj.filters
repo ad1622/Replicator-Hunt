@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\exercises\ex5TheProgrammablePipeline\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\exercises\ex5TheProgrammablePipeline\shader\phong.frag">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="..\..\..\exercises\ex5TheProgrammablePipeline\shader\simpleshader.frag">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="..\..\..\exercises\ex5TheProgrammablePipeline\shader\phong.vert">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="..\..\..\exercises\ex5TheProgrammablePipeline\shader\simpleshader.vert">
+      <Filter>shader</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6D9551C7-DC77-4158-A5D5-711470C157F9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shader">
+      <UniqueIdentifier>{3132D4A0-D544-435D-90C5-53F8497D6755}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

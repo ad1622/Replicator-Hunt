@@ -1,0 +1,54 @@
+﻿Build started 06.06.2014 11:07:29.
+     1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\lib3ds.vcxproj" on node 4 (Build target(s)).
+     1>CustomBuild:
+         Building Custom Rule D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/external/lib3ds-2.0/src/CMakeLists.txt
+         CMake does not need to re-run because D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D LIB3DS_EXPORTS /D "CMAKE_INTDIR=\"Debug\"" /D lib3ds_EXPORTS /D _WINDLL /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"lib3ds.dir\Debug\\" /Fd"lib3ds.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt "..\..\..\..\external\lib3ds-2.0\src\lib3ds_atmosphere.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_background.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_camera.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_chunk.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_chunktable.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_file.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_io.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_light.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_material.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_math.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_matrix.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_mesh.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_node.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_quat.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_shadow.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_track.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_util.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_vector.c" "..\..\..\..\external\lib3ds-2.0\src\lib3ds_viewport.c"
+         lib3ds_atmosphere.c
+         lib3ds_background.c
+         lib3ds_camera.c
+         lib3ds_chunk.c
+         lib3ds_chunktable.c
+         lib3ds_file.c
+         lib3ds_io.c
+         lib3ds_light.c
+         lib3ds_material.c
+         lib3ds_math.c
+         lib3ds_matrix.c
+         lib3ds_mesh.c
+         lib3ds_node.c
+         lib3ds_quat.c
+         lib3ds_shadow.c
+         lib3ds_track.c
+         lib3ds_util.c
+         lib3ds_vector.c
+         lib3ds_viewport.c
+         Generating Code...
+       Link:
+         E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\bin\Debug\lib3ds-2_0d.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/bin/Debug/lib3ds-2_0d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/lib/Debug/lib3ds-2_0d.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug /DLL lib3ds.dir\Debug\lib3ds_atmosphere.obj
+         lib3ds.dir\Debug\lib3ds_background.obj
+         lib3ds.dir\Debug\lib3ds_camera.obj
+         lib3ds.dir\Debug\lib3ds_chunk.obj
+         lib3ds.dir\Debug\lib3ds_chunktable.obj
+         lib3ds.dir\Debug\lib3ds_file.obj
+         lib3ds.dir\Debug\lib3ds_io.obj
+         lib3ds.dir\Debug\lib3ds_light.obj
+         lib3ds.dir\Debug\lib3ds_material.obj
+         lib3ds.dir\Debug\lib3ds_math.obj
+         lib3ds.dir\Debug\lib3ds_matrix.obj
+         lib3ds.dir\Debug\lib3ds_mesh.obj
+         lib3ds.dir\Debug\lib3ds_node.obj
+         lib3ds.dir\Debug\lib3ds_quat.obj
+         lib3ds.dir\Debug\lib3ds_shadow.obj
+         lib3ds.dir\Debug\lib3ds_track.obj
+         lib3ds.dir\Debug\lib3ds_util.obj
+         lib3ds.dir\Debug\lib3ds_vector.obj
+         lib3ds.dir\Debug\lib3ds_viewport.obj
+            Creating library D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/lib/Debug/lib3ds-2_0d.lib and object D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/lib/Debug/lib3ds-2_0d.exp
+         lib3ds.vcxproj -> D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\bin\Debug\lib3ds-2_0d.dll
+     1>Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\lib3ds.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.48
