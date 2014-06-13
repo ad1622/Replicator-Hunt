@@ -1,9 +1,10 @@
-﻿Build started 13.06.2014 14:43:34.
+﻿Build started 13.06.2014 16:19:34.
      1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\ex5TheProgrammablePipeline.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\exercises\ex5TheProgrammablePipeline" /I"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\freeglut-2.8.1\include" /I"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\freeglut-2.8.1\include\GL" /I"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\exercises\common" /I"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\glm-0.9.5.2\include" /I"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\GLee-5.4" /I"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\lib3ds-2.0\src" /I"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\DevIL-1.7.8\include" /I"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\DevIL-1.7.8\include\IL" /I"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\glm-obj-0.3.1" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"ex5TheProgrammablePipeline.dir\Debug\\" /Fd"ex5TheProgrammablePipeline.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp
          main.cpp
      1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(228): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(229): warning C4305: 'initializing' : truncation from 'double' to 'float'
      1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(230): warning C4305: 'initializing' : truncation from 'double' to 'float'
      1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(301): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(303): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
@@ -44,4 +45,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.51
+Time Elapsed 00:00:01.55

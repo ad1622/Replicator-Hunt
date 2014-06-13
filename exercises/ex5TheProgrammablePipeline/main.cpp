@@ -160,10 +160,11 @@ void setLights() {
 	glEnable(GL_LIGHT0);
 
 	//setup light0 (SUN)
-	float ambient[] = {0.4f, 0.4f, 0.4f, 1.0f};
+	//float ambient[] = {0.4f, 0.4f, 0.4f, 1.0f};
+	float ambient[] = { 0.05f, 0.05f, 0.05f, 1.0f };
 	float diffuse[] = {1.0f, 1.0f, 0.6f, 1.0f};
 	float specular[] = {1.0f, 1.0f, 0.6f, 1.0f};
-	float position[] = {32.0f, 32.0f, 32.0f, 1.0f};
+	float position[] = {0.0f, 0.0f, 0.0f, 1.0f};
 
 	glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
 	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
@@ -188,7 +189,6 @@ void setLights() {
 	specular[1] = 0.8f;
 	specular[2] = 1.0f;
 
-	glLightfv(GL_LIGHT1, GL_AMBIENT, ambient);
 	glLightfv(GL_LIGHT1, GL_DIFFUSE, diffuse);
 	glLightfv(GL_LIGHT1, GL_SPECULAR, specular);
 	glLightfv(GL_LIGHT1, GL_POSITION, position);
@@ -226,8 +226,8 @@ void setReplMaterial() {
 	float zero[] = { 0.0f, 0.0f, 0.0f, 1.0f };
 
 	float ambient[] = { .2f, 0.2, 0.2, 1.0f };
-	float diffuse[] = { 1, 1, 1, 1.0f };
-	float specular[] = { 0.05, 0.05, 0.05, 1.0f };
+	float diffuse[] = { 0.65, 0.65, 0.65, 1.0f };
+	float specular[] = { 0.65, 0.65, 0.65, 1.0f };
 	float emission[] = { .1f, .1f, .1f, 1.0f };
 
 	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, ambient);
@@ -471,7 +471,7 @@ void display() {
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	// set vantage point
-	gluLookAt(0, 0, 0, 4, 0, 0, 0.0, 1.0, 0.0);
+	gluLookAt(0.01, 0.0, 0.0, 4.0, 0.0, 0.0, 0.0, 1.0, 0.0);
 	
 	// add rotation
 	//rotation z(neigung)
