@@ -221,6 +221,22 @@ void setCapeMaterial() {
 	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, materialShininess);
 }
 
+void setReplMaterial() {
+
+	float zero[] = { 0.0f, 0.0f, 0.0f, 1.0f };
+
+	float ambient[] = { .2f, 0.2, 0.2, 1.0f };
+	float diffuse[] = { 1, 1, 1, 1.0f };
+	float specular[] = { 0.05, 0.05, 0.05, 1.0f };
+	float emission[] = { .1f, .1f, .1f, 1.0f };
+
+	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, ambient);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, diffuse);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, specular);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, emission);
+	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, materialShininess);
+}
+
 void renderVader() {
 	glPushMatrix();
 
@@ -279,19 +295,6 @@ void renderFloor() {
 	glPopMatrix();
 }
 
-void renderReplicatorLeg(){
-	glPushMatrix();
-	
-
-	//glTranslatef(0,-.93f,0);
-	//glScalef(.8f,.8f,.8f);
-	//renderCellStrip(1);
-
-	//disable enabled features again
-
-	glPopMatrix();
-}
-
 void renderCellStrip(int length, float width, float depth){
 
 	float hinten, vorne, links, rechts, oben, unten;
@@ -299,14 +302,10 @@ void renderCellStrip(int length, float width, float depth){
 	hinten = -vorne;
 	rechts = width*0.5;
 	links = -rechts;
-	oben = length*0.5;
-	unten = -oben;
+	oben = length;//*0.5;
+	unten = 0;// -oben;
 
 	glPushMatrix();
-
-	glTranslatef(5,0.5,5);
-
-	glScalef(0.5, 0.5, 0.5);
 	glEnable(GL_COLOR_MATERIAL); //use vertex colors instead of material colors
 	glColorMaterial(GL_FRONT_AND_BACK, GL_DIFFUSE); //use the vertex color as diffuse color
 	glEnable(GL_TEXTURE_2D); //enable texturing
@@ -317,14 +316,14 @@ void renderCellStrip(int length, float width, float depth){
 
 		//front:
 		glBegin(GL_TRIANGLE_STRIP);
-		glNormal3f(0, 0, 1);
+		glNormal3f(0, 0, width);
 		glTexCoord2f(0.0, 0.0);
 		glVertex3f(links, unten, vorne);
 		glTexCoord2f(0.0, length);
 		glVertex3f(links, oben, vorne);
-		glTexCoord2f(1.0, 0.0);
+		glTexCoord2f(width, 0.0);
 		glVertex3f(rechts, unten, vorne);
-		glTexCoord2f(1.0, length);
+		glTexCoord2f(width, length);
 		glVertex3f(rechts, oben, vorne);
 		glEnd();
 
@@ -336,9 +335,9 @@ void renderCellStrip(int length, float width, float depth){
 		glVertex3f(rechts, unten, hinten);
 		glTexCoord2f(0.0, length);
 		glVertex3f(rechts, oben, hinten);
-		glTexCoord2f(1.0, 0.0);
+		glTexCoord2f(width, 0.0);
 		glVertex3f(links, unten, hinten);
-		glTexCoord2f(1.0, length);
+		glTexCoord2f(width, length);
 		glVertex3f(links, oben, hinten);
 		glEnd();
 
@@ -346,9 +345,9 @@ void renderCellStrip(int length, float width, float depth){
 		//rechts
 		glBegin(GL_TRIANGLE_STRIP);
 		glNormal3f(1, 0, 0);
-		glTexCoord2f(1.0, 0.0);
+		glTexCoord2f(depth, 0.0);
 		glVertex3f(rechts, unten, hinten);
-		glTexCoord2f(1.0, length);
+		glTexCoord2f(depth, length);
 		glVertex3f(rechts, oben, hinten);
 		glTexCoord2f(0.0, 0.0);
 		glVertex3f(rechts, unten, vorne);
@@ -363,35 +362,35 @@ void renderCellStrip(int length, float width, float depth){
 		glVertex3f(links, unten, hinten);
 		glTexCoord2f(0.0, length);
 		glVertex3f(links, oben, hinten);
-		glTexCoord2f(1.0, 0.0);
+		glTexCoord2f(depth, 0.0);
 		glVertex3f(links, unten, vorne);
-		glTexCoord2f(1.0, length);
+		glTexCoord2f(depth, length);
 		glVertex3f(links, oben, vorne);
 		glEnd();
 
 		//oben:
 		glBegin(GL_TRIANGLE_STRIP);
 		glNormal3f(0, 1, 0);
-		glTexCoord2f(0.0, 1.0);
+		glTexCoord2f(0.0, depth);
 		glVertex3f(links, oben, hinten);
 		glTexCoord2f(0.0, 0.0);
 		glVertex3f(links, oben, vorne);
-		glTexCoord2f(1.0, 1.0);
+		glTexCoord2f(width, depth);
 		glVertex3f(rechts, oben, hinten);
-		glTexCoord2f(1.0, 0.0);
+		glTexCoord2f(width, 0.0);
 		glVertex3f(rechts, oben, vorne);
 		glEnd();
 		
 		//unten:
 		glBegin(GL_TRIANGLE_STRIP);
 		glNormal3f(0, -1, 0);
-		glTexCoord2f(0.0, 1.0);
+		glTexCoord2f(0.0, depth);
 		glVertex3f(links, unten, hinten);
 		glTexCoord2f(0.0, 0.0);
 		glVertex3f(links, unten, vorne);
-		glTexCoord2f(1.0, 1.0);
+		glTexCoord2f(width, depth);
 		glVertex3f(rechts, unten, hinten);
-		glTexCoord2f(1.0, 0.0);
+		glTexCoord2f(width, 0.0);
 		glVertex3f(rechts, unten, vorne);
 		glEnd();
 
@@ -404,22 +403,64 @@ void renderCellStrip(int length, float width, float depth){
 	glPopMatrix();
 }
 
-void setReplMaterial() {
+//alpha degree first angle, beta second ....
+//a = 110, b = 70, c = 105 default values
+void renderReplicatorLeg(int alpha, int beta, int gamma){
+	glPushMatrix();
+	glRotatef(-90, 0, 0, 1);
+	renderCellStrip(3, 1, 1);
+	
+	glRotatef(alpha, 0, 0, 1);
+	glTranslatef(0, 0, 0);
+	renderCellStrip(2, 1, 1);
 
-	float zero[] = { 0.0f, 0.0f, 0.0f, 1.0f };
+	glTranslatef(0, 2, 0);
+	glRotatef(180-beta, 0, 0, 1);
+	renderCellStrip(6, 1, 1);
 
-	float ambient[] = { .2f, 0.2, 0.2, 1.0f };
-	float diffuse[] = { 1, 1, 1, 1.0f };
-	float specular[] = { 0.05, 0.05, 0.05, 1.0f };
-	float emission[] = { .1f, .1f, .1f, 1.0f };
+	glTranslatef(0, 6, 0);
+	glRotatef(180-gamma, 0, 0, 1);
+	renderCellStrip(3, 1, 1);
 
-	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, ambient);
-	glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, diffuse);
-	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, specular);
-	glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, emission);
-	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, materialShininess);
+	//disable enabled features again
+
+	glPopMatrix();
 }
 
+void renderReplicator(float x, float y, int rot){
+	glPushMatrix();
+	setReplMaterial();
+	glTranslatef(x, 0.25, y);
+	glRotatef(rot,0,1,0);
+	glScalef(.05, .05f, .05f);
+	renderCellStrip(3, 5, 7);
+
+	glPushMatrix();
+	glTranslatef(-4, 0, 1);
+	glRotatef(0+10, 0, 1, 0);
+	renderReplicatorLeg(110, 70, 105);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(4, 0, 1);
+	glRotatef(180-10, 0, 1, 0);
+	renderReplicatorLeg(110, 70, 105);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(1, 0, -5);
+	glRotatef(-90-10, 0, 1, 0);
+	renderReplicatorLeg(110, 70, 105);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-1, 0,-5);
+	glRotatef(-90+10, 0, 1, 0);
+	renderReplicatorLeg(110, 70, 105);
+	glPopMatrix();
+
+	glPopMatrix();
+}
 
 /**
  * called when a frame should be rendered
@@ -452,8 +493,15 @@ void display() {
 
 	glUniform4f(glGetUniformLocation(phongshaderprogram, "mycolor"), 1.0, 1.0, 1.0, 1.0);
 	glUniform1i(glGetUniformLocation(phongshaderprogram, "mytexture"), 5);
-	setReplMaterial();
-	renderCellStrip(4, 1.0, 1.0);
+	
+	renderReplicator(4, 4, 0);
+	renderReplicator(3, 5, 35);
+	renderReplicator(4, 3, 12);
+	renderReplicator(3, 2, 97);
+	renderReplicator(5, 4, 182);
+	renderReplicator(3, 4, 310);
+	renderReplicator(5, 5, 250);
+
 	renderFloor();
 	glUseProgram(0);
 
@@ -488,7 +536,6 @@ void display() {
 
 	if(useSimpleShader)
 		glUseProgram(0);
-	renderCellStrip(4, 1, 1);
 	LOG_GL_ERRORS();
 	glutSwapBuffers();
 }
