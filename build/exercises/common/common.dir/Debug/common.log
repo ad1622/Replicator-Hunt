@@ -1,5 +1,5 @@
-﻿Build started 06.06.2014 11:07:33.
-     1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\exercises\common\common.vcxproj" on node 3 (Build target(s)).
+﻿Build started 14.06.2014 09:56:09.
+     1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\exercises\common\common.vcxproj" on node 3 (Rebuild target(s)).
      1>CustomBuild:
          Building Custom Rule D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/exercises/common/CMakeLists.txt
          CMake does not need to re-run because D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\exercises\common\CMakeFiles\generate.stamp is up-to-date.
@@ -41,8 +41,8 @@
          common.dir\Debug\/oogl/timer.cpp.obj
          common.dir\Debug\/utils/timer.cpp.obj
          common.vcxproj -> D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\lib\Debug\commond.lib
-     1>Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\exercises\common\common.vcxproj" (Build target(s)).
+     1>Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\exercises\common\common.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:11.31
+Time Elapsed 00:00:11.05

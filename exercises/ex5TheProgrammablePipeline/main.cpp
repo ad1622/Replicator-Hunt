@@ -42,6 +42,12 @@ bool useSimpleShader = true; //use simple shader
 float materialShininess = 64.0;   //material shininess
 
 float angle = 0;
+float repl_ani_state = 0;
+bool repl_ani_dir_up = true;
+float repl_side_ud_left = 0;
+float repl_side_ud_right = 0;
+float repl_side_bf = 0;
+
 float wobbletime = 0;
 
 void cleanup();
@@ -161,10 +167,14 @@ void setLights() {
 
 	//setup light0 (SUN)
 	//float ambient[] = {0.4f, 0.4f, 0.4f, 1.0f};
-	float ambient[] = { 0.05f, 0.05f, 0.05f, 1.0f };
+	float ambient[] = { 0.05f, 0.05f, 0.05f, 1.00f };
+	
+	//float diffuse[] = { 0, 0, 0, 0 };
+	//float specular[] = { 0, 0, 0, 0.0f };
 	float diffuse[] = {1.0f, 1.0f, 0.6f, 1.0f};
 	float specular[] = {1.0f, 1.0f, 0.6f, 1.0f};
 	float position[] = {0.0f, 0.0f, 0.0f, 1.0f};
+	float spotdir[] = { 0.0f, -1.0f, 0.0f};
 
 	glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
 	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
@@ -180,7 +190,7 @@ void setLights() {
 
 	glEnable(GL_LIGHT1);
 
-	//setup light1
+	//setup light1 rotating sun
 	diffuse[0] = 0.8f;
 	diffuse[1] = 0.8f;
 	diffuse[2] = 1.0f;
@@ -189,9 +199,9 @@ void setLights() {
 	specular[1] = 0.8f;
 	specular[2] = 1.0f;
 
+	glLightfv(GL_LIGHT1, GL_AMBIENT, ambient);
 	glLightfv(GL_LIGHT1, GL_DIFFUSE, diffuse);
 	glLightfv(GL_LIGHT1, GL_SPECULAR, specular);
-	glLightfv(GL_LIGHT1, GL_POSITION, position);
 
 	glPushMatrix();
 	glTranslatef(32, 32, 32);
@@ -203,6 +213,23 @@ void setLights() {
 	glScalef(40, 40, 40);
 	renderLightSphere(diffuse);
 	glPopMatrix();
+
+	//setup light2 flashlight
+	glEnable(GL_LIGHT2);
+	glLightf(GL_LIGHT2, GL_SPOT_CUTOFF, 80);
+	glLightfv(GL_LIGHT2, GL_SPOT_DIRECTION, spotdir);
+
+
+	glLightfv(GL_LIGHT2, GL_AMBIENT, ambient);
+	glLightfv(GL_LIGHT2, GL_DIFFUSE, diffuse);
+	glLightfv(GL_LIGHT2, GL_SPECULAR, specular);
+
+	glPushMatrix();
+	glTranslatef(2, 1, 2);
+	glLightfv(GL_LIGHT2, GL_POSITION, position);
+	renderLightSphere(diffuse);
+	glPopMatrix();
+
 }
 
 void setCapeMaterial() {
@@ -435,28 +462,37 @@ void renderReplicator(float x, float y, int rot){
 	glScalef(.05, .05f, .05f);
 	renderCellStrip(3, 5, 7);
 
+	//side left
 	glPushMatrix();
+	glRotatef(repl_side_bf, 0, 1, 0);
+	glRotatef(repl_side_ud_left, 0, 0, 1);
 	glTranslatef(-4, 0, 1);
-	glRotatef(0+10, 0, 1, 0);
 	renderReplicatorLeg(110, 70, 105);
 	glPopMatrix();
 
+
+	//side right
 	glPushMatrix();
-	glTranslatef(4, 0, 1);
-	glRotatef(180-10, 0, 1, 0);
+	glRotatef(180 + repl_side_bf, 0, 1, 0);
+	glRotatef(repl_side_ud_right, 0, 0, 1);
+	glTranslatef(-4, 0, -1);
 	renderReplicatorLeg(110, 70, 105);
 	glPopMatrix();
 
+
+	//front left
 	glPushMatrix();
 	glTranslatef(1, 0, -5);
 	glRotatef(-90-10, 0, 1, 0);
-	renderReplicatorLeg(110, 70, 105);
+	renderReplicatorLeg(110 + 10 * -repl_ani_state, 70 + 15 * -repl_ani_state, 130 + 20 * -repl_ani_state);
 	glPopMatrix();
 
+
+	//front right
 	glPushMatrix();
 	glTranslatef(-1, 0,-5);
 	glRotatef(-90+10, 0, 1, 0);
-	renderReplicatorLeg(110, 70, 105);
+	renderReplicatorLeg(110 + 10 * repl_ani_state, 70 + 15 * repl_ani_state, 130 + 20 * repl_ani_state);
 	glPopMatrix();
 
 	glPopMatrix();
@@ -651,6 +687,26 @@ void update(int value) {
 			angle -= 360;
 	}
 	wobbletime += 0.1f;
+
+	if (repl_ani_dir_up){
+		repl_ani_state += 0.2f;
+		if (repl_ani_state > 1){
+			repl_ani_state = 1.0f;
+			repl_ani_dir_up = false;
+		}
+	}
+	else{
+		repl_ani_state -= 0.2f;
+		if (repl_ani_state < -1){
+			repl_ani_state = -1.0f;
+			repl_ani_dir_up = true;
+		}
+	}
+
+	//calculate angels
+	repl_side_bf = 25 * repl_ani_state;
+	repl_side_ud_left = 10 * (!repl_ani_dir_up ? abs(repl_ani_state) : 1) -10;
+	repl_side_ud_right = 10 * (repl_ani_dir_up ? abs(repl_ani_state) : 1) - 10;
 
 	glutPostRedisplay();
 

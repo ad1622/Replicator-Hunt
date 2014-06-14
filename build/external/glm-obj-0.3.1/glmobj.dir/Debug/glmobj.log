@@ -1,5 +1,5 @@
-﻿Build started 06.06.2014 11:07:29.
-     1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\glmobj.vcxproj" on node 3 (Build target(s)).
+﻿Build started 14.06.2014 09:56:05.
+     1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\glmobj.vcxproj" on node 3 (Rebuild target(s)).
      1>CustomBuild:
          Building Custom Rule D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/external/glm-obj-0.3.1/CMakeLists.txt
          CMake does not need to re-run because D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp is up-to-date.
@@ -179,8 +179,8 @@
          glmobj.dir\Debug\glmimg_sim.obj
          glmobj.dir\Debug\glm_util.obj
          glmobj.vcxproj -> D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\lib\Debug\glmobjd.lib
-     1>Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\glmobj.vcxproj" (Build target(s)).
+     1>Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\glmobj.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.26
+Time Elapsed 00:00:04.09
