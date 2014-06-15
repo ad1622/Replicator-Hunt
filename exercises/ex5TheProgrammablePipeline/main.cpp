@@ -36,12 +36,14 @@ oogl::Texture* tex2 = NULL;
 GLuint simpleshaderprogram;
 GLuint phongshaderprogram;
 
-int shadingMode = 0;	//use flat ,smooth or phong shading
 bool moveLight = true;	//move light
-bool useSimpleShader = true; //use simple shader
+//bool useSimpleShader = true; //use simple shader
 float materialShininess = 64.0;   //material shininess
 
+//rotation of sun
 float angle = 0;
+
+//replicator animation stuff
 float repl_ani_state = 0;
 bool repl_ani_dir_up = true;
 float repl_side_ud_left = 0;
@@ -49,6 +51,11 @@ float repl_side_ud_right = 0;
 float repl_side_bf = 0;
 
 float wobbletime = 0;
+
+//gamestats
+int score = 0;
+int healthpoints = 0;
+
 
 void cleanup();
 
@@ -231,7 +238,7 @@ void setLights() {
 	glPopMatrix();
 
 }
-
+/*
 void setCapeMaterial() {
 
 	float zero[] = {0.0f, 0.0f, 0.0f, 1.0f};
@@ -246,6 +253,49 @@ void setCapeMaterial() {
 	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, specular);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, emission);
 	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, materialShininess);
+}*/
+
+void print(float x, float y, float r, float g, float b, void* font,const char *string, ...)
+{
+	glColor3f(r, g, b);
+	glRasterPos2f(x, y);
+
+	char text[256];
+	va_list ap;
+
+	if (string == NULL) return;
+
+	va_start(ap, string);
+	vsprintf(text, string, ap);
+	va_end(ap);
+
+	int len, i;
+	len = (int)strlen(text);
+	for (i = 0; i < len; i++) {
+		glutBitmapCharacter(font, text[i]);
+	}
+}
+
+void drawHUD(){
+	glMatrixMode(GL_PROJECTION);
+	glPushMatrix();
+	glLoadIdentity();
+	glOrtho(0, windowWidth, windowHeight, 0, -1, 1);
+	glMatrixMode(GL_MODELVIEW);
+	glPushMatrix();
+	glLoadIdentity();
+	glDepthMask(GL_FALSE);  // disable writes to Z-Buffer
+	glDisable(GL_DEPTH_TEST);
+
+	//draw here -1,-1 left bottom / 1,1 top right
+	print(-1, 0.9, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "SCORE: %d", score);
+	print(-1, 0.8, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "HP: %d", healthpoints);
+
+	glEnable(GL_DEPTH_TEST); 
+	glDepthMask(GL_TRUE);
+	glPopMatrix();
+	glMatrixMode(GL_PROJECTION);
+	glPopMatrix();
 }
 
 void setReplMaterial() {
@@ -264,6 +314,7 @@ void setReplMaterial() {
 	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, materialShininess);
 }
 
+/*
 void renderVader() {
 	glPushMatrix();
 
@@ -282,6 +333,7 @@ void renderVader() {
 
 	glPopMatrix();
 }
+*/
 
 void renderFloor() {
 	glPushMatrix();
@@ -541,37 +593,39 @@ void display() {
 	renderFloor();
 	glUseProgram(0);
 
+	drawHUD();
+
 	//render floor with our simple shader (light is ignored)
-	if(useSimpleShader)
-	{
-		glUseProgram(simpleshaderprogram);
+	//if(useSimpleShader)
+	//{
+	//	glUseProgram(simpleshaderprogram);
 
-		/*
-		Examples for setting uniform parameters in a shader program:
+	//	/*
+	//	Examples for setting uniform parameters in a shader program:
 
-		Get Index of uniform parameter:
-			glGetUniformLocation(program,"name")
+	//	Get Index of uniform parameter:
+	//		glGetUniformLocation(program,"name")
 
-		set uniform float:
-			glUniform1f(glGetUniformLocation(program,"name") ,1.0);
+	//	set uniform float:
+	//		glUniform1f(glGetUniformLocation(program,"name") ,1.0);
 
-		set uniform int (or texture unit):
-			glUniform1i(glGetUniformLocation(program,"name") , 1);
+	//	set uniform int (or texture unit):
+	//		glUniform1i(glGetUniformLocation(program,"name") , 1);
 
-		set uniform vec4 with 4 values:
-			glUniform4f(glGetUniformLocation(program,"name") ,1.0,1.0,1.0,1.0);
+	//	set uniform vec4 with 4 values:
+	//		glUniform4f(glGetUniformLocation(program,"name") ,1.0,1.0,1.0,1.0);
 
-		*/
+	//	*/
 
-		glUniform4f(glGetUniformLocation(simpleshaderprogram,"mycolor"),1.0,0.0,0.0,1.0);
-		glUniform1i(glGetUniformLocation(simpleshaderprogram,"mytexture"),5);
-		glUniform1f(glGetUniformLocation(simpleshaderprogram,"wobbletime"),wobbletime);
-	}
+	//	glUniform4f(glGetUniformLocation(simpleshaderprogram,"mycolor"),1.0,0.0,0.0,1.0);
+	//	glUniform1i(glGetUniformLocation(simpleshaderprogram,"mytexture"),5);
+	//	glUniform1f(glGetUniformLocation(simpleshaderprogram,"wobbletime"),wobbletime);
+	//}
 
-	//renderFloor();
+	////renderFloor();
 
-	if(useSimpleShader)
-		glUseProgram(0);
+	//if(useSimpleShader)
+	//	glUseProgram(0);
 	LOG_GL_ERRORS();
 	glutSwapBuffers();
 }
@@ -612,16 +666,10 @@ void keyboard(unsigned char key, int x, int y) {
 		exit(0);
 		break;
 	case 's':
-		shadingMode = (shadingMode+1)%3;
-		std::cout << "shading: " << (shadingMode==0?"flat":(shadingMode==1?"smooth":"phong")) << std::endl;
 		break;
 	case 'l':
-		moveLight = !moveLight;
-		std::cout << "move light: " << std::boolalpha << moveLight << std::endl;
 		break;
 	case 'a':
-		useSimpleShader = !useSimpleShader;
-		std::cout << "animationshader: " << std::boolalpha << useSimpleShader << std::endl;
 		break;
 	}
 	glutPostRedisplay();
