@@ -11,12 +11,14 @@
 #include <oogl/GLSLProgram.h>
 #include <glm/gtc/type_ptr.hpp>
 #include <math.h>
+#include <stdio.h>
 
 #include <sstream>
 #include <stdexcept>
 
 #define M_PI 3.1415926535897932384626433832795
 #define PLAYER_SPEED 0.25
+#define REPLICATOR_SPEED 0.02
 
 int windowWidth, windowHeight;
 
@@ -56,8 +58,18 @@ float wobbletime = 0;
 int score = 0;
 int healthpoints = 0;
 
+typedef struct{
+	float x, z;
+	int rot, index;
+
+} Replicator;
+
+Replicator * Replicators[50];
+int ReplicatorCount;
+int REPLICATOR_MAX = 50;
 
 void cleanup();
+void addReplicator(float x, float z, int rot);
 
 void initSimpleShader()
 {
@@ -128,6 +140,14 @@ void init() {
 
 	tex1 = oogl::loadTexture("models/lava.jpg");
 	tex2 = oogl::loadTexture("models/ReplBlock.jpg");
+
+	ReplicatorCount = 0;
+
+	addReplicator(0, 0, 0);
+	addReplicator(0, 0, 22);
+	addReplicator(0, 0, 45);
+	addReplicator(0, 0, 68);
+	addReplicator(0, 0, 90);
 
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LESS);
@@ -255,6 +275,8 @@ void setCapeMaterial() {
 	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, materialShininess);
 }*/
 
+//GUI-HUD STUFF
+//prints text do display
 void print(float x, float y, float r, float g, float b, void* font,const char *string, ...)
 {
 	glColor3f(r, g, b);
@@ -276,6 +298,7 @@ void print(float x, float y, float r, float g, float b, void* font,const char *s
 	}
 }
 
+//draws a hud over the 3d stuff
 void drawHUD(){
 	glMatrixMode(GL_PROJECTION);
 	glPushMatrix();
@@ -298,21 +321,6 @@ void drawHUD(){
 	glPopMatrix();
 }
 
-void setReplMaterial() {
-
-	float zero[] = { 0.0f, 0.0f, 0.0f, 1.0f };
-
-	float ambient[] = { .2f, 0.2, 0.2, 1.0f };
-	float diffuse[] = { 0.65, 0.65, 0.65, 1.0f };
-	float specular[] = { 0.65, 0.65, 0.65, 1.0f };
-	float emission[] = { .1f, .1f, .1f, 1.0f };
-
-	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, ambient);
-	glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, diffuse);
-	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, specular);
-	glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, emission);
-	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, materialShininess);
-}
 
 /*
 void renderVader() {
@@ -372,6 +380,54 @@ void renderFloor() {
 	glDisable(GL_COLOR_MATERIAL);
 
 	glPopMatrix();
+}
+
+//REPLICATOR STUFF
+void addReplicator(float x, float y, int rot){
+	int i;
+	if (ReplicatorCount < REPLICATOR_MAX)
+	for (i = 0; i < REPLICATOR_MAX; i++){
+		if (Replicators[i] == NULL){
+			Replicators[i] = new Replicator{x,y,rot, i};
+			ReplicatorCount++;
+			break;
+		}
+	}
+}
+
+void removeReplicator(int index){
+	if (Replicators[index] != NULL){
+		delete(Replicators[index]);
+		ReplicatorCount--;
+	}
+}
+
+void replicatorLogic(){
+	int i;
+	for (i = 0; i < REPLICATOR_MAX; i++){
+		if (Replicators[i] != NULL){
+			//@TODO
+			Replicators[i]->x += REPLICATOR_SPEED*sinf(Replicators[i]->rot*M_PI/180.0);
+			Replicators[i]->z += REPLICATOR_SPEED*cosf(Replicators[i]->rot*M_PI/180.0);
+
+		}
+	}
+}
+
+void setReplMaterial() {
+
+	float zero[] = { 0.0f, 0.0f, 0.0f, 1.0f };
+
+	float ambient[] = { .2f, 0.2, 0.2, 1.0f };
+	float diffuse[] = { 0.65, 0.65, 0.65, 1.0f };
+	float specular[] = { 0.65, 0.65, 0.65, 1.0f };
+	float emission[] = { .1f, .1f, .1f, 1.0f };
+
+	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, ambient);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, diffuse);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, specular);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, emission);
+	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, materialShininess);
 }
 
 void renderCellStrip(int length, float width, float depth){
@@ -506,11 +562,11 @@ void renderReplicatorLeg(int alpha, int beta, int gamma){
 	glPopMatrix();
 }
 
-void renderReplicator(float x, float y, int rot){
+void renderReplicator(Replicator * repl){
 	glPushMatrix();
 	setReplMaterial();
-	glTranslatef(x, 0.25, y);
-	glRotatef(rot,0,1,0);
+	glTranslatef(repl->x, 0.25, repl->z);
+	glRotatef(repl->rot+180, 0, 1, 0);
 	glScalef(.05, .05f, .05f);
 	renderCellStrip(3, 5, 7);
 
@@ -550,6 +606,19 @@ void renderReplicator(float x, float y, int rot){
 	glPopMatrix();
 }
 
+
+void renderReplicators(){
+	int i;
+	
+	for (i = 0; i < REPLICATOR_MAX; i++){
+		if (Replicators[i] != NULL){
+			renderReplicator(Replicators[i]);
+		}
+	}
+}
+
+//DISPLAY
+
 /**
  * called when a frame should be rendered
  */
@@ -560,7 +629,6 @@ void display() {
 	glLoadIdentity();
 	// set vantage point
 	gluLookAt(0.01, 0.0, 0.0, 4.0, 0.0, 0.0, 0.0, 1.0, 0.0);
-	
 	// add rotation
 	//rotation z(neigung)
 	glRotatef(rotationX, 0.0f, 0.0f, 1.0f);
@@ -582,13 +650,7 @@ void display() {
 	glUniform4f(glGetUniformLocation(phongshaderprogram, "mycolor"), 1.0, 1.0, 1.0, 1.0);
 	glUniform1i(glGetUniformLocation(phongshaderprogram, "mytexture"), 5);
 	
-	renderReplicator(4, 4, 0);
-	renderReplicator(3, 5, 35);
-	renderReplicator(4, 3, 12);
-	renderReplicator(3, 2, 97);
-	renderReplicator(5, 4, 182);
-	renderReplicator(3, 4, 310);
-	renderReplicator(5, 5, 250);
+	renderReplicators();
 
 	renderFloor();
 	glUseProgram(0);
@@ -660,6 +722,8 @@ void idle() {
  * @param x mouse x position in pixel relative to the window, when the key was pressed
  * @param y mouse y position in pixel relative to the window, when the key was pressed
  */
+
+//INPUT
 void keyboard(unsigned char key, int x, int y) {
 	switch (key) {
 	case 27: //27=esc
@@ -727,6 +791,8 @@ void passiveMouseMotion(int x, int y) {
 	//}
 }
 
+//MAIN
+
 void update(int value) {
 	if(moveLight)
 	{
@@ -755,6 +821,8 @@ void update(int value) {
 	repl_side_bf = 25 * repl_ani_state;
 	repl_side_ud_left = 10 * (!repl_ani_dir_up ? abs(repl_ani_state) : 1) -10;
 	repl_side_ud_right = 10 * (repl_ani_dir_up ? abs(repl_ani_state) : 1) - 10;
+
+	replicatorLogic();
 
 	glutPostRedisplay();
 
