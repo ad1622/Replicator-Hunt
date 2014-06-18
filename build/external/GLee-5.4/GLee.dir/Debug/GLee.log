@@ -1,10 +1,10 @@
-﻿Build started 14.06.2014 09:56:04.
-     1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\GLee-5.4\GLee.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 18.06.2014 22:48:16.
+     1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\GLee-5.4\GLee.vcxproj" on node 2 (Build target(s)).
      1>CustomBuild:
-         Building Custom Rule D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/external/GLee-5.4/CMakeLists.txt
-         CMake does not need to re-run because D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\external\GLee-5.4\CMakeFiles\generate.stamp is up-to-date.
+         Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/GLee-5.4/CMakeLists.txt
+         CMake does not need to re-run because D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\GLee-5.4\CMakeFiles\generate.stamp is up-to-date.
        ClCompile:
-         E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\GLee-5.4" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"GLee.dir\Debug\\" /Fd"GLee.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\..\external\GLee-5.4\GLee.cpp"
+         E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\GLee-5.4" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"GLee.dir\Debug\\" /Fd"GLee.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\..\external\GLee-5.4\GLee.cpp"
          GLee.cpp
      1>..\..\..\external\GLee-5.4\GLee.cpp(15923): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(112) : see declaration of 'strcpy'
@@ -13,10 +13,10 @@
      1>..\..\..\external\GLee-5.4\GLee.cpp(16010): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
        Lib:
-         E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\lib\Debug\GLeed.lib" /NOLOGO GLee.dir\Debug\GLee.obj
-         GLee.vcxproj -> D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\lib\Debug\GLeed.lib
-     1>Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\GLee-5.4\GLee.vcxproj" (Rebuild target(s)).
+         E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\lib\Debug\GLeed.lib" /NOLOGO GLee.dir\Debug\GLee.obj
+         GLee.vcxproj -> D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\lib\Debug\GLeed.lib
+     1>Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\GLee-5.4\GLee.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.21
+Time Elapsed 00:00:01.37

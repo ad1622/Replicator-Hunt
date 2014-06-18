@@ -1,10 +1,10 @@
-﻿Build started 14.06.2014 09:56:05.
-     1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\glmobj.vcxproj" on node 3 (Rebuild target(s)).
+﻿Build started 18.06.2014 22:48:17.
+     1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\glmobj.vcxproj" on node 3 (Build target(s)).
      1>CustomBuild:
-         Building Custom Rule D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/external/glm-obj-0.3.1/CMakeLists.txt
-         CMake does not need to re-run because D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp is up-to-date.
+         Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt
+         CMake does not need to re-run because D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp is up-to-date.
        ClCompile:
-         E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\glm-obj-0.3.1" /I"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\external\glm-obj-0.3.1" /I"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\DevIL-1.7.8\include" /I"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\external\DevIL-1.7.8\include\IL" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D HAVE_DEVIL /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"glmobj.dir\Debug\\" /Fd"glmobj.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\..\external\glm-obj-0.3.1\glm\glm.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg_devil.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg_jpg.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg_png.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg_sdl.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg_sim.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glm_util.cpp"
+         E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1" /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1" /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include" /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D HAVE_DEVIL /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"glmobj.dir\Debug\\" /Fd"glmobj.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\..\external\glm-obj-0.3.1\glm\glm.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg_devil.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg_jpg.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg_png.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg_sdl.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg_sim.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glm_util.cpp"
          glm.cpp
      1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(267): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(112) : see declaration of 'strcpy'
@@ -170,7 +170,7 @@
                  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(112) : see declaration of 'strcpy'
          Generating Code...
        Lib:
-         E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\lib\Debug\glmobjd.lib" /NOLOGO glmobj.dir\Debug\glm.obj
+         E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\lib\Debug\glmobjd.lib" /NOLOGO glmobj.dir\Debug\glm.obj
          glmobj.dir\Debug\glmimg.obj
          glmobj.dir\Debug\glmimg_devil.obj
          glmobj.dir\Debug\glmimg_jpg.obj
@@ -178,9 +178,9 @@
          glmobj.dir\Debug\glmimg_sdl.obj
          glmobj.dir\Debug\glmimg_sim.obj
          glmobj.dir\Debug\glm_util.obj
-         glmobj.vcxproj -> D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\lib\Debug\glmobjd.lib
-     1>Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\glmobj.vcxproj" (Rebuild target(s)).
+         glmobj.vcxproj -> D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\lib\Debug\glmobjd.lib
+     1>Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\glmobj.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.09
+Time Elapsed 00:00:04.26

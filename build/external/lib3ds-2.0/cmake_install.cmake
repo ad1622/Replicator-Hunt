@@ -1,8 +1,8 @@
-# Install script for directory: D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/external/lib3ds-2.0
+# Install script for directory: D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build")
+  SET(CMAKE_INSTALL_PREFIX "D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,7 +29,7 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/external/lib3ds-2.0/src/cmake_install.cmake")
+  INCLUDE("D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/external/lib3ds-2.0/src/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

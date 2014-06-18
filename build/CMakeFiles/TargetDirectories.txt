@@ -1,12 +1,7 @@
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/ALL_BUILD.dir
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/external/GLee-5.4/CMakeFiles/GLee.dir
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/ZERO_CHECK.dir
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/exercises/common/CMakeFiles/common.dir
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/exercises/ex1Introduction/CMakeFiles/ex1Introduction.dir
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/exercises/ex2TransformationAndProjection/CMakeFiles/ex2TransformationAndProjection.dir
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/exercises/ex3DepthHandlingAndRasterization/CMakeFiles/ex3DepthHandlingAndRasterization.dir
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/exercises/ex4LocalShading/CMakeFiles/ex4LocalShading.dir
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/exercises/ex5TheProgrammablePipeline/CMakeFiles/ex5TheProgrammablePipeline.dir
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/exercises/ex6AdvancedTextureMapping/CMakeFiles/ex6AdvancedTextureMapping.dir
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/external/glm-obj-0.3.1/CMakeFiles/glmobj.dir
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/external/lib3ds-2.0/src/CMakeFiles/lib3ds.dir
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/ALL_BUILD.dir
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/external/GLee-5.4/CMakeFiles/GLee.dir
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/ZERO_CHECK.dir
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/exercises/common/CMakeFiles/common.dir
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/exercises/ex5TheProgrammablePipeline/CMakeFiles/ex5TheProgrammablePipeline.dir
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/external/glm-obj-0.3.1/CMakeFiles/glmobj.dir
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/external/lib3ds-2.0/src/CMakeFiles/lib3ds.dir

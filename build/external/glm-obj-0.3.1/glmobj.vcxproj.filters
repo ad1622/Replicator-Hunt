@@ -39,7 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="glm">
-      <UniqueIdentifier>{67E27CF1-C687-40CB-88BB-849816C94905}</UniqueIdentifier>
+      <UniqueIdentifier>{094F2CC5-3B6D-4864-874A-4B1C8DF7497A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

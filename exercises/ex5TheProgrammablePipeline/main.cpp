@@ -35,11 +35,13 @@ oogl::Model *vaderCape = NULL;
 
 oogl::Texture* tex1 = NULL;
 oogl::Texture* tex2 = NULL;
+oogl::Texture* tex3 = NULL;
 
 GLuint simpleshaderprogram;
 GLuint phongshaderprogram;
 
 bool moveLight = true;	//move light
+bool enableflashlight = false;
 //bool useSimpleShader = true; //use simple shader
 float materialShininess = 64.0;   //material shininess
 
@@ -157,8 +159,9 @@ void init() {
 
 	glutWarpPointer(glutGet(GLUT_WINDOW_WIDTH)*0.5, glutGet(GLUT_WINDOW_HEIGHT)*0.5);
 
-	tex1 = oogl::loadTexture("models/lava.jpg");
+	tex1 = oogl::loadTexture("models/Gravel.png");
 	tex2 = oogl::loadTexture("models/ReplBlock.jpg");
+	tex3 = oogl::loadTexture("models/Concrete.png");
 
 	ReplicatorCount = 0;
 
@@ -212,15 +215,12 @@ void setLights() {
 	glEnable(GL_LIGHT0);
 
 	//setup light0 (SUN)
-	//float ambient[] = {0.4f, 0.4f, 0.4f, 1.0f};
 	float ambient[] = { 0.05f, 0.05f, 0.05f, 1.00f };
 
-	//float diffuse[] = { 0, 0, 0, 0 };
-	//float specular[] = { 0, 0, 0, 0.0f };
 	float diffuse[] = { 1.0f, 1.0f, 0.6f, 1.0f };
 	float specular[] = { 1.0f, 1.0f, 0.6f, 1.0f };
 	float position[] = { 0.0f, 0.0f, 0.0f, 1.0f };
-	float spotdir[] = { 0.0f, -1.0f, 0.0f };
+	float spotdir[] = { 0.5f, -0.5f, 0.5f };
 
 	glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
 	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
@@ -259,24 +259,43 @@ void setLights() {
 	glScalef(40, 40, 40);
 	renderLightSphere(diffuse);
 	glPopMatrix();
+}
 
+void setupflashlight(){
+	if (enableflashlight){
+	glEnable(GL_LIGHTING);
 	//setup light2 flashlight
+	float ambient[] = { 0.00f, 0.00f, 0.00f, 1.00f };
+
+	float diffuse[] = { 1.0f, 1.0f, 0.6f, 1.0f };
+	float specular[] = { 1.0f, 1.0f, 0.6f, 1.0f };
+	float position[] = { 0.0f, 0.0f, 0.0f, 1.0f };
+	float spotdir[] = { 1.0f, 0.0f, 0.0f };
+
 	glEnable(GL_LIGHT2);
-	glLightf(GL_LIGHT2, GL_SPOT_CUTOFF, 80);
+	glLightf(GL_LIGHT2, GL_SPOT_CUTOFF, 20.0f);
 	glLightfv(GL_LIGHT2, GL_SPOT_DIRECTION, spotdir);
-
-
 	glLightfv(GL_LIGHT2, GL_AMBIENT, ambient);
 	glLightfv(GL_LIGHT2, GL_DIFFUSE, diffuse);
 	glLightfv(GL_LIGHT2, GL_SPECULAR, specular);
 
 	glPushMatrix();
-	glTranslatef(2, 1, 2);
+	glTranslatef(0, 0.1, 0);
 	glLightfv(GL_LIGHT2, GL_POSITION, position);
-	renderLightSphere(diffuse);
 	glPopMatrix();
+	}
+	else{
+		glDisable(GL_LIGHT2);
+
+	}
+
+
+
+
 
 }
+
+
 /*
 void setCapeMaterial() {
 
@@ -335,6 +354,7 @@ void drawHUD(){
 	print(-0.99, 0.8, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "HP: %d", healthpoints);
 	print(-0.99, 0.7, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "Remaining: %d / %d", ReplicatorCount, ProjectileCount);
 	print(-0.99, 0.6, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "x: %f / z: %f", eyeX, eyeZ);
+	print(-0.99, 0.5, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "x: %d", enableflashlight);
 
 	glEnable(GL_LIGHTING);
 	glEnable(GL_DEPTH_TEST);
@@ -366,43 +386,121 @@ glPopMatrix();
 }
 */
 
-void renderFloor() {
+
+void renderFloor(){
+
+	float hinten, vorne, links, rechts, oben, unten, width, length, depth;
+	vorne = 0;
+	hinten = 64;
+	rechts = 64;
+	links = 0;
+	oben = 2;//*0.5;
+	unten = 0;// -oben;
+	width = 64;
+	length = 2;
+	depth = 64;
+
 	glPushMatrix();
 	glEnable(GL_COLOR_MATERIAL); //use vertex colors instead of material colors
 	glColorMaterial(GL_FRONT_AND_BACK, GL_DIFFUSE); //use the vertex color as diffuse color
-
 	glEnable(GL_TEXTURE_2D); //enable texturing
 
-	tex1->bind(5);
+	tex3->bind(5);
 
-	//glTranslatef(0,-.93f,0);
-	//glScalef(.8f,.8f,.8f);
+	glColor4f(0.5, 0.5, 0.5, 1);
 
-	glBegin(GL_QUADS);
-	glColor4f(1, 1, 1, 1);
-	glNormal3f(0, 1, 0); //specify the normal for the following vertices
-
-
+	//front:
+	glBegin(GL_TRIANGLE_STRIP);
+	glNormal3f(0, 0, 1);
 	glTexCoord2f(0.0, 0.0);
-	glVertex3f(0, 0, 0);
-
-	glTexCoord2f(0.0, 64.0);
-	glVertex3f(0, 0, 64.0);
-
-	glTexCoord2f(64.0, 64.0);
-	glVertex3f(64.0, 0, 64.0);
-
-	glTexCoord2f(64.0, 0.0);
-	glVertex3f(64.0, 0, 0);
+	glVertex3f(links, unten, vorne);
+	glTexCoord2f(0.0, length / 2.0);
+	glVertex3f(links, oben, vorne);
+	glTexCoord2f(width / 2.0, 0.0);
+	glVertex3f(rechts, unten, vorne);
+	glTexCoord2f(width / 2.0, length / 2.0);
+	glVertex3f(rechts, oben, vorne);
 	glEnd();
 
+
+	//hinten:
+	glBegin(GL_TRIANGLE_STRIP);
+	glNormal3f(0, 0, -1);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(rechts, unten, hinten);
+	glTexCoord2f(0.0, length / 2.0);
+	glVertex3f(rechts, oben, hinten);
+	glTexCoord2f(width / 2.0, 0.0);
+	glVertex3f(links, unten, hinten);
+	glTexCoord2f(width / 2.0, length / 2.0);
+	glVertex3f(links, oben, hinten);
+	glEnd();
+
+
+	//rechts
+	glBegin(GL_TRIANGLE_STRIP);
+	glNormal3f(-1, 0, 0);
+	glTexCoord2f(depth / 2.0, 0.0);
+	glVertex3f(rechts, unten, hinten);
+	glTexCoord2f(depth / 2.0, length / 2.0);
+	glVertex3f(rechts, oben, hinten);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(rechts, unten, vorne);
+	glTexCoord2f(0.0, length / 2.0);
+	glVertex3f(rechts, oben, vorne);
+	glEnd();
+
+	//links:
+	glBegin(GL_TRIANGLE_STRIP);
+	glNormal3f(1, 0, 0);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(links, unten, hinten);
+	glTexCoord2f(0.0, length / 2.0);
+	glVertex3f(links, oben, hinten);
+	glTexCoord2f(depth / 2.0, 0.0);
+	glVertex3f(links, unten, vorne);
+	glTexCoord2f(depth / 2.0, length / 2.0);
+	glVertex3f(links, oben, vorne);
+	glEnd();
+
+	tex3->unbind();
+	tex1->bind(5);
+	//unten:
+	glBegin(GL_TRIANGLE_STRIP);
+	glNormal3f(0, 1, 0);
+	glTexCoord2f(0.0, depth/2.0);
+	glVertex3f(links, unten, hinten);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(links, unten, vorne);
+	glTexCoord2f(width/2.0, depth/2.0);
+	glVertex3f(rechts, unten, hinten);
+	glTexCoord2f(width/2.0, 0.0);
+	glVertex3f(rechts, unten, vorne);
+	glEnd();
 	tex1->unbind();
+	
 
 	//disable enabled features again
 	glDisable(GL_TEXTURE_2D);
 	glDisable(GL_COLOR_MATERIAL);
 
 	glPopMatrix();
+}
+
+void setMapMaterial() {
+
+	float zero[] = { 0.0f, 0.0f, 0.0f, 1.0f };
+
+	float ambient[] = { .2f, 0.2, 0.2, 1.0f };
+	float diffuse[] = { 0.65, 0.65, 0.65, 1.0f };
+	float specular[] = { 0.0, .0, 0.0, 1.0f };
+	float emission[] = { .0f, .0f, .0f, 1.0f };
+
+	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, ambient);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, diffuse);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, specular);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, emission);
+	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, materialShininess);
 }
 
 //PROJECTILE STUFF
@@ -702,6 +800,7 @@ void display() {
 	glLoadIdentity();
 	// set vantage point
 	gluLookAt(0.0, 0.0, 0.0, 4.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+	setupflashlight();
 	// add rotation
 	//rotation z(neigung)
 	glRotatef(rotationX, 0.0f, 0.0f, 1.0f);
@@ -722,10 +821,11 @@ void display() {
 
 	glUniform4f(glGetUniformLocation(phongshaderprogram, "mycolor"), 1.0, 1.0, 1.0, 1.0);
 	glUniform1i(glGetUniformLocation(phongshaderprogram, "mytexture"), 5);
+	glUniform1i(glGetUniformLocation(phongshaderprogram, "enablespot"), enableflashlight);
 
 	renderReplicators();
 	
-
+	setMapMaterial();
 	renderFloor();
 	glUseProgram(0);
 	renderProjectiles();
@@ -809,6 +909,7 @@ void keyboard(unsigned char key, int x, int y) {
 		gamerunning = !gamerunning;
 		break;
 	case 'l':
+		enableflashlight = !enableflashlight;
 		break;
 	case 'a':
 		break;

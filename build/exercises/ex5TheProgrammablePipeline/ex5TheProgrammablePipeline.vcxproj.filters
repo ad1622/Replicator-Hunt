@@ -24,10 +24,10 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{6D9551C7-DC77-4158-A5D5-711470C157F9}</UniqueIdentifier>
+      <UniqueIdentifier>{17453C34-DFEC-42C7-B131-BECB588DADA1}</UniqueIdentifier>
     </Filter>
     <Filter Include="shader">
-      <UniqueIdentifier>{3132D4A0-D544-435D-90C5-53F8497D6755}</UniqueIdentifier>
+      <UniqueIdentifier>{9CF6A137-E241-4D88-8AA4-3E823BC1545A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

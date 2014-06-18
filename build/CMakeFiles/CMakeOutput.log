@@ -10,8 +10,8 @@ Microsoft (R) Build Engine version 12.0.30110.0
 [Microsoft .NET Framework, version 4.0.30319.18408]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 29.05.2014 06:43:36.
-Project "D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\2.8.12.2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+Build started 18.06.2014 22:47:46.
+Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\2.8.12.2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
   Creating directory "Debug\CompilerIdC.tlog\".
@@ -22,7 +22,7 @@ ClCompile:
   CMakeCCompilerId.c
 Link:
   E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCCompilerId.obj
-  CompilerIdC.vcxproj -> D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\2.8.12.2\CompilerIdC\.\CompilerIdC.exe
+  CompilerIdC.vcxproj -> D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\2.8.12.2\CompilerIdC\.\CompilerIdC.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
   :VCEnd
@@ -30,20 +30,20 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
-Done Building Project "D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\2.8.12.2\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\2.8.12.2\CompilerIdC\CompilerIdC.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:03.96
+Time Elapsed 00:00:02.63
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
 
-The C compiler identification is MSVC, found in "D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/2.8.12.2/CompilerIdC/CompilerIdC.exe"
+The C compiler identification is MSVC, found in "D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/2.8.12.2/CompilerIdC/CompilerIdC.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler:  
@@ -56,8 +56,8 @@ Microsoft (R) Build Engine version 12.0.30110.0
 [Microsoft .NET Framework, version 4.0.30319.18408]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 29.05.2014 06:43:40.
-Project "D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\2.8.12.2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
+Build started 18.06.2014 22:47:48.
+Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\2.8.12.2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
   Creating directory "Debug\CompilerIdCXX.tlog\".
@@ -68,7 +68,7 @@ ClCompile:
   CMakeCXXCompilerId.cpp
 Link:
   E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCXXCompilerId.obj
-  CompilerIdCXX.vcxproj -> D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\2.8.12.2\CompilerIdCXX\.\CompilerIdCXX.exe
+  CompilerIdCXX.vcxproj -> D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\2.8.12.2\CompilerIdCXX\.\CompilerIdCXX.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
   :VCEnd
@@ -76,174 +76,174 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
-Done Building Project "D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\2.8.12.2\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
+Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\2.8.12.2\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.51
+Time Elapsed 00:00:02.64
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
 
-The CXX compiler identification is MSVC, found in "D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CompilerIdCXX.exe"
+The CXX compiler identification is MSVC, found in "D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CompilerIdCXX.exe"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/CMakeTmp
+Change Dir: D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/CMakeTmp
 
-Run Build Command:C:\PROGRA~2\MSBuild\12.0\Bin\MSBuild.exe cmTryCompileExec2436729375.vcxproj /p:Configuration=Debug /p:VisualStudioVersion=12.0
+Run Build Command:C:\PROGRA~2\MSBuild\12.0\Bin\MSBuild.exe cmTryCompileExec716562159.vcxproj /p:Configuration=Debug /p:VisualStudioVersion=12.0
 Microsoft (R) Build Engine version 12.0.30110.0
 [Microsoft .NET Framework, version 4.0.30319.18408]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 29.05.2014 06:43:42.
-Project "D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\cmTryCompileExec2436729375.vcxproj" on node 1 (default targets).
+Build started 18.06.2014 22:47:51.
+Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\cmTryCompileExec716562159.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTryCompileExec2436729375.dir\Debug\".
-  Creating directory "D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTryCompileExec2436729375.dir\Debug\cmTryCom.5845D1EF.tlog\".
+  Creating directory "cmTryCompileExec716562159.dir\Debug\".
+  Creating directory "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTryCompileExec716562159.dir\Debug\cmTryCom.1F5B5048.tlog\".
 InitializeBuildStatus:
-  Creating "cmTryCompileExec2436729375.dir\Debug\cmTryCom.5845D1EF.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTryCompileExec716562159.dir\Debug\cmTryCom.1F5B5048.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec2436729375.dir\Debug\\" /Fd"cmTryCompileExec2436729375.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue testCCompiler.c
+  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec716562159.dir\Debug\\" /Fd"cmTryCompileExec716562159.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue testCCompiler.c
   Microsoft (R) C/C++ Optimizing Compiler Version 18.00.21005.1 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec2436729375.dir\Debug\\" /Fd"cmTryCompileExec2436729375.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue testCCompiler.c
-  testCCompiler.c
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec716562159.dir\Debug\\" /Fd"cmTryCompileExec716562159.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue testCCompiler.c
   
+  testCCompiler.c
 Link:
-  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2436729375.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2436729375.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2436729375.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec2436729375.dir\Debug\testCCompiler.obj
-  cmTryCompileExec2436729375.vcxproj -> D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2436729375.exe
+  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec716562159.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec716562159.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec716562159.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec716562159.dir\Debug\testCCompiler.obj
+  cmTryCompileExec716562159.vcxproj -> D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec716562159.exe
 FinalizeBuildStatus:
-  Deleting file "cmTryCompileExec2436729375.dir\Debug\cmTryCom.5845D1EF.tlog\unsuccessfulbuild".
-  Touching "cmTryCompileExec2436729375.dir\Debug\cmTryCom.5845D1EF.tlog\cmTryCompileExec2436729375.lastbuildstate".
-Done Building Project "D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\cmTryCompileExec2436729375.vcxproj" (default targets).
+  Deleting file "cmTryCompileExec716562159.dir\Debug\cmTryCom.1F5B5048.tlog\unsuccessfulbuild".
+  Touching "cmTryCompileExec716562159.dir\Debug\cmTryCom.1F5B5048.tlog\cmTryCompileExec716562159.lastbuildstate".
+Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\cmTryCompileExec716562159.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:02.01
+Time Elapsed 00:00:00.65
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/CMakeTmp
+Change Dir: D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/CMakeTmp
 
-Run Build Command:C:\PROGRA~2\MSBuild\12.0\Bin\MSBuild.exe cmTryCompileExec2540741065.vcxproj /p:Configuration=Debug /p:VisualStudioVersion=12.0
+Run Build Command:C:\PROGRA~2\MSBuild\12.0\Bin\MSBuild.exe cmTryCompileExec3894237698.vcxproj /p:Configuration=Debug /p:VisualStudioVersion=12.0
 Microsoft (R) Build Engine version 12.0.30110.0
 [Microsoft .NET Framework, version 4.0.30319.18408]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 29.05.2014 06:43:44.
-Project "D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\cmTryCompileExec2540741065.vcxproj" on node 1 (default targets).
+Build started 18.06.2014 22:47:52.
+Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\cmTryCompileExec3894237698.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTryCompileExec2540741065.dir\Debug\".
-  Creating directory "D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTryCompileExec2540741065.dir\Debug\cmTryCom.F8E18BB6.tlog\".
+  Creating directory "cmTryCompileExec3894237698.dir\Debug\".
+  Creating directory "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTryCompileExec3894237698.dir\Debug\cmTryCom.51EDA516.tlog\".
 InitializeBuildStatus:
-  Creating "cmTryCompileExec2540741065.dir\Debug\cmTryCom.F8E18BB6.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTryCompileExec3894237698.dir\Debug\cmTryCom.51EDA516.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec2540741065.dir\Debug\\" /Fd"cmTryCompileExec2540741065.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c"
+  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec3894237698.dir\Debug\\" /Fd"cmTryCompileExec3894237698.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c"
   Microsoft (R) C/C++ Optimizing Compiler Version 18.00.21005.1 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec2540741065.dir\Debug\\" /Fd"cmTryCompileExec2540741065.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c"
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec3894237698.dir\Debug\\" /Fd"cmTryCompileExec3894237698.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c"
   
   CMakeCCompilerABI.c
 Link:
-  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2540741065.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2540741065.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2540741065.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec2540741065.dir\Debug\CMakeCCompilerABI.obj
-  cmTryCompileExec2540741065.vcxproj -> D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2540741065.exe
+  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3894237698.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3894237698.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3894237698.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec3894237698.dir\Debug\CMakeCCompilerABI.obj
+  cmTryCompileExec3894237698.vcxproj -> D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3894237698.exe
 FinalizeBuildStatus:
-  Deleting file "cmTryCompileExec2540741065.dir\Debug\cmTryCom.F8E18BB6.tlog\unsuccessfulbuild".
-  Touching "cmTryCompileExec2540741065.dir\Debug\cmTryCom.F8E18BB6.tlog\cmTryCompileExec2540741065.lastbuildstate".
-Done Building Project "D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\cmTryCompileExec2540741065.vcxproj" (default targets).
+  Deleting file "cmTryCompileExec3894237698.dir\Debug\cmTryCom.51EDA516.tlog\unsuccessfulbuild".
+  Touching "cmTryCompileExec3894237698.dir\Debug\cmTryCom.51EDA516.tlog\cmTryCompileExec3894237698.lastbuildstate".
+Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\cmTryCompileExec3894237698.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.25
+Time Elapsed 00:00:00.64
 
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/CMakeTmp
+Change Dir: D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/CMakeTmp
 
-Run Build Command:C:\PROGRA~2\MSBuild\12.0\Bin\MSBuild.exe cmTryCompileExec2270998126.vcxproj /p:Configuration=Debug /p:VisualStudioVersion=12.0
+Run Build Command:C:\PROGRA~2\MSBuild\12.0\Bin\MSBuild.exe cmTryCompileExec1306633423.vcxproj /p:Configuration=Debug /p:VisualStudioVersion=12.0
 Microsoft (R) Build Engine version 12.0.30110.0
 [Microsoft .NET Framework, version 4.0.30319.18408]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 29.05.2014 06:43:46.
-Project "D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\cmTryCompileExec2270998126.vcxproj" on node 1 (default targets).
+Build started 18.06.2014 22:47:53.
+Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\cmTryCompileExec1306633423.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTryCompileExec2270998126.dir\Debug\".
-  Creating directory "D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTryCompileExec2270998126.dir\Debug\cmTryCom.E34FA00F.tlog\".
+  Creating directory "cmTryCompileExec1306633423.dir\Debug\".
+  Creating directory "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTryCompileExec1306633423.dir\Debug\cmTryCom.BC0F1B4D.tlog\".
 InitializeBuildStatus:
-  Creating "cmTryCompileExec2270998126.dir\Debug\cmTryCom.E34FA00F.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTryCompileExec1306633423.dir\Debug\cmTryCom.BC0F1B4D.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec2270998126.dir\Debug\\" /Fd"cmTryCompileExec2270998126.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue testCXXCompiler.cxx
+  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec1306633423.dir\Debug\\" /Fd"cmTryCompileExec1306633423.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue testCXXCompiler.cxx
   Microsoft (R) C/C++ Optimizing Compiler Version 18.00.21005.1 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec2270998126.dir\Debug\\" /Fd"cmTryCompileExec2270998126.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue testCXXCompiler.cxx
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec1306633423.dir\Debug\\" /Fd"cmTryCompileExec1306633423.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue testCXXCompiler.cxx
   
   testCXXCompiler.cxx
 Link:
-  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2270998126.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2270998126.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2270998126.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec2270998126.dir\Debug\testCXXCompiler.obj
-  cmTryCompileExec2270998126.vcxproj -> D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2270998126.exe
+  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1306633423.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1306633423.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1306633423.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec1306633423.dir\Debug\testCXXCompiler.obj
+  cmTryCompileExec1306633423.vcxproj -> D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1306633423.exe
 FinalizeBuildStatus:
-  Deleting file "cmTryCompileExec2270998126.dir\Debug\cmTryCom.E34FA00F.tlog\unsuccessfulbuild".
-  Touching "cmTryCompileExec2270998126.dir\Debug\cmTryCom.E34FA00F.tlog\cmTryCompileExec2270998126.lastbuildstate".
-Done Building Project "D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\cmTryCompileExec2270998126.vcxproj" (default targets).
+  Deleting file "cmTryCompileExec1306633423.dir\Debug\cmTryCom.BC0F1B4D.tlog\unsuccessfulbuild".
+  Touching "cmTryCompileExec1306633423.dir\Debug\cmTryCom.BC0F1B4D.tlog\cmTryCompileExec1306633423.lastbuildstate".
+Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\cmTryCompileExec1306633423.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.27
+Time Elapsed 00:00:00.68
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/CMakeTmp
+Change Dir: D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/CMakeTmp
 
-Run Build Command:C:\PROGRA~2\MSBuild\12.0\Bin\MSBuild.exe cmTryCompileExec2916339259.vcxproj /p:Configuration=Debug /p:VisualStudioVersion=12.0
+Run Build Command:C:\PROGRA~2\MSBuild\12.0\Bin\MSBuild.exe cmTryCompileExec3962123194.vcxproj /p:Configuration=Debug /p:VisualStudioVersion=12.0
 Microsoft (R) Build Engine version 12.0.30110.0
 [Microsoft .NET Framework, version 4.0.30319.18408]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 29.05.2014 06:43:47.
-Project "D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\cmTryCompileExec2916339259.vcxproj" on node 1 (default targets).
+Build started 18.06.2014 22:47:53.
+Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\cmTryCompileExec3962123194.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTryCompileExec2916339259.dir\Debug\".
-  Creating directory "D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTryCompileExec2916339259.dir\Debug\cmTryCom.B83DB477.tlog\".
+  Creating directory "cmTryCompileExec3962123194.dir\Debug\".
+  Creating directory "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTryCompileExec3962123194.dir\Debug\cmTryCom.EB856FC9.tlog\".
 InitializeBuildStatus:
-  Creating "cmTryCompileExec2916339259.dir\Debug\cmTryCom.B83DB477.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTryCompileExec3962123194.dir\Debug\cmTryCom.EB856FC9.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec2916339259.dir\Debug\\" /Fd"cmTryCompileExec2916339259.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp"
+  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec3962123194.dir\Debug\\" /Fd"cmTryCompileExec3962123194.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp"
   Microsoft (R) C/C++ Optimizing Compiler Version 18.00.21005.1 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec2916339259.dir\Debug\\" /Fd"cmTryCompileExec2916339259.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp"
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec3962123194.dir\Debug\\" /Fd"cmTryCompileExec3962123194.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp"
   
   CMakeCXXCompilerABI.cpp
 Link:
-  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2916339259.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2916339259.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2916339259.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec2916339259.dir\Debug\CMakeCXXCompilerABI.obj
-  cmTryCompileExec2916339259.vcxproj -> D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2916339259.exe
+  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3962123194.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3962123194.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3962123194.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec3962123194.dir\Debug\CMakeCXXCompilerABI.obj
+  cmTryCompileExec3962123194.vcxproj -> D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3962123194.exe
 FinalizeBuildStatus:
-  Deleting file "cmTryCompileExec2916339259.dir\Debug\cmTryCom.B83DB477.tlog\unsuccessfulbuild".
-  Touching "cmTryCompileExec2916339259.dir\Debug\cmTryCom.B83DB477.tlog\cmTryCompileExec2916339259.lastbuildstate".
-Done Building Project "D:\Users\Dominik\Desktop\Uni\4. Sem\CG\ex6AdvancedTextureMapping\ex6AdvancedTextureMapping\build\CMakeFiles\CMakeTmp\cmTryCompileExec2916339259.vcxproj" (default targets).
+  Deleting file "cmTryCompileExec3962123194.dir\Debug\cmTryCom.EB856FC9.tlog\unsuccessfulbuild".
+  Touching "cmTryCompileExec3962123194.dir\Debug\cmTryCom.EB856FC9.tlog\cmTryCompileExec3962123194.lastbuildstate".
+Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\CMakeTmp\cmTryCompileExec3962123194.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.30
+Time Elapsed 00:00:00.65
 
 

@@ -1,9 +1,9 @@
 # CMake generation dependency list for this directory.
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/CMakeLists.txt
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/CMakeLists.txt
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeVS12FindMake.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeDetermineSystem.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeSystem.cmake.in
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/2.8.12.2/CMakeSystem.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/2.8.12.2/CMakeSystem.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeDetermineCCompiler.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeDetermineCompiler.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeDetermineCompilerId.cmake
@@ -11,7 +11,7 @@ C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CompilerId/VS-10.vcxpro
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeClDeps.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeFindBinUtils.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCCompiler.cmake.in
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/2.8.12.2/CMakeCCompiler.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/2.8.12.2/CMakeCCompiler.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeDetermineCXXCompiler.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeDetermineCompiler.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-CXX.cmake
@@ -20,7 +20,7 @@ C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CompilerId/VS-10.vcxpro
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeClDeps.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeFindBinUtils.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCXXCompiler.cmake.in
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/2.8.12.2/CMakeCXXCompiler.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/2.8.12.2/CMakeCXXCompiler.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeSystemSpecificInformation.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeGenericSystem.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows.cmake
@@ -30,7 +30,7 @@ C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-MSVC-C
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-MSVC.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeDetermineRCCompiler.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeRCCompiler.cmake.in
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/2.8.12.2/CMakeRCCompiler.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/2.8.12.2/CMakeRCCompiler.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeRCInformation.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeTestRCCompiler.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake
@@ -40,7 +40,7 @@ C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeDetermineCompilerA
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeParseImplicitLinkInfo.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCCompilerABI.c
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCCompiler.cmake.in
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/2.8.12.2/CMakeCCompiler.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/2.8.12.2/CMakeCCompiler.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCXXInformation.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-MSVC-CXX.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-MSVC.cmake
@@ -51,18 +51,18 @@ C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeDetermineCompilerA
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeParseImplicitLinkInfo.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeCXXCompiler.cmake.in
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/CMakeFiles/2.8.12.2/CMakeCXXCompiler.cmake
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/cmake/setup.cmake
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/cmake/functions/AddLauncher.cmake
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/cmake/functions/AddSubDirectories.cmake
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/cmake/functions/FindBinaryDirs.cmake
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/cmake/functions/FindInternalPackage.cmake
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/cmake/functions/GroupFiles.cmake
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/cmake/functions/PackageExercise.cmake
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/cmake/functions/PublishPackage.cmake
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/cmake/functions/UsePackage.cmake
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/cmake/makros/CreateAppLib.cmake
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/cmake/makros/IncludeUserSettings.cmake
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/cmake/makros/ResolveFiles.cmake
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/user.cmake
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/cmake/takedown.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/2.8.12.2/CMakeCXXCompiler.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/cmake/setup.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/cmake/functions/AddLauncher.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/cmake/functions/AddSubDirectories.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/cmake/functions/FindBinaryDirs.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/cmake/functions/FindInternalPackage.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/cmake/functions/GroupFiles.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/cmake/functions/PackageExercise.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/cmake/functions/PublishPackage.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/cmake/functions/UsePackage.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/cmake/makros/CreateAppLib.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/cmake/makros/IncludeUserSettings.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/cmake/makros/ResolveFiles.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/user.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/cmake/takedown.cmake

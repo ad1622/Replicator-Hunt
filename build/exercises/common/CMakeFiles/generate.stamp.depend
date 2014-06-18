@@ -1,11 +1,11 @@
 # CMake generation dependency list for this directory.
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/exercises/common/CMakeLists.txt
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/exercises/common/CMakeLists.txt
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindOpenGL.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageMessage.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeParseArguments.cmake
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/cmake/modules/FindGLM.cmake
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/cmake/modules/FindDevIL.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/cmake/modules/FindGLM.cmake
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/cmake/modules/FindDevIL.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageMessage.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/CMakeParseArguments.cmake

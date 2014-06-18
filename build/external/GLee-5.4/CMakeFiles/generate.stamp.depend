@@ -1,5 +1,5 @@
 # CMake generation dependency list for this directory.
-D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/external/GLee-5.4/CMakeLists.txt
+D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/GLee-5.4/CMakeLists.txt
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindOpenGL.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
 C:/Program Files (x86)/CMake 2.8/share/cmake-2.8/Modules/FindPackageMessage.cmake

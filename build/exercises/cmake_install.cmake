@@ -1,8 +1,8 @@
-# Install script for directory: D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/exercises
+# Install script for directory: D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/exercises
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build")
+  SET(CMAKE_INSTALL_PREFIX "D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,13 +29,8 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/exercises/common/cmake_install.cmake")
-  INCLUDE("D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/exercises/ex1Introduction/cmake_install.cmake")
-  INCLUDE("D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/exercises/ex2TransformationAndProjection/cmake_install.cmake")
-  INCLUDE("D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/exercises/ex3DepthHandlingAndRasterization/cmake_install.cmake")
-  INCLUDE("D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/exercises/ex4LocalShading/cmake_install.cmake")
-  INCLUDE("D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/exercises/ex5TheProgrammablePipeline/cmake_install.cmake")
-  INCLUDE("D:/Users/Dominik/Desktop/Uni/4. Sem/CG/ex6AdvancedTextureMapping/ex6AdvancedTextureMapping/build/exercises/ex6AdvancedTextureMapping/cmake_install.cmake")
+  INCLUDE("D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/exercises/common/cmake_install.cmake")
+  INCLUDE("D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/exercises/ex5TheProgrammablePipeline/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
