@@ -1,18 +1,5 @@
-﻿Build started 18.06.2014 22:48:16.
-     1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\ZERO_CHECK.vcxproj" on node 2 (Build target(s)).
-     1>CustomBuild:
-         Checking Build System
-         CMake does not need to re-run because D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/CMakeFiles/generate.stamp is up-to-date.
-         CMake does not need to re-run because D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/external/CMakeFiles/generate.stamp is up-to-date.
-         CMake does not need to re-run because D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/external/GLee-5.4/CMakeFiles/generate.stamp is up-to-date.
-         CMake does not need to re-run because D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/external/glm-obj-0.3.1/CMakeFiles/generate.stamp is up-to-date.
-         CMake does not need to re-run because D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/external/lib3ds-2.0/CMakeFiles/generate.stamp is up-to-date.
-         CMake does not need to re-run because D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/external/lib3ds-2.0/src/CMakeFiles/generate.stamp is up-to-date.
-         CMake does not need to re-run because D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/exercises/CMakeFiles/generate.stamp is up-to-date.
-         CMake does not need to re-run because D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/exercises/common/CMakeFiles/generate.stamp is up-to-date.
-         CMake does not need to re-run because D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/exercises/ex5TheProgrammablePipeline/CMakeFiles/generate.stamp is up-to-date.
-     1>Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\ZERO_CHECK.vcxproj" (Build target(s)).
+﻿Build started 19.06.2014 11:31:34.
 
 Build succeeded.
 
-Time Elapsed 00:00:00.44
+Time Elapsed 00:00:00.12

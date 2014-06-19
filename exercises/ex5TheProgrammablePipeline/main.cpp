@@ -16,6 +16,10 @@
 #include <sstream>
 #include <stdexcept>
 
+#include <glm/glm.hpp> 
+#include <glm/gtc/constants.hpp> 
+#include <glm/gtc/matrix_transform.hpp> 
+
 #define M_PI 3.1415926535897932384626433832795
 #define PLAYER_SPEED 0.25
 #define REPLICATOR_SPEED 0.02
@@ -36,6 +40,7 @@ oogl::Model *vaderCape = NULL;
 oogl::Texture* tex1 = NULL;
 oogl::Texture* tex2 = NULL;
 oogl::Texture* tex3 = NULL;
+oogl::Texture* tex4 = NULL;
 
 GLuint simpleshaderprogram;
 GLuint phongshaderprogram;
@@ -61,6 +66,7 @@ float wobbletime = 0;
 int score = 0;
 int healthpoints = 0;
 bool gamerunning = true;
+bool isinmenu = false;
 
 typedef struct{
 	float x, z;
@@ -162,6 +168,7 @@ void init() {
 	tex1 = oogl::loadTexture("models/Gravel.png");
 	tex2 = oogl::loadTexture("models/ReplBlock.jpg");
 	tex3 = oogl::loadTexture("models/Concrete.png");
+	tex4 = oogl::loadTexture("models/Concrete.png");
 
 	ReplicatorCount = 0;
 
@@ -190,6 +197,9 @@ void cleanup() {
 	delete vaderCape;
 
 	delete tex1;
+	delete tex2;
+	delete tex3;
+	delete tex4;
 
 	if (simpleshaderprogram > 0)
 		glDeleteProgram(simpleshaderprogram);
@@ -220,7 +230,7 @@ void setLights() {
 	float diffuse[] = { 1.0f, 1.0f, 0.6f, 1.0f };
 	float specular[] = { 1.0f, 1.0f, 0.6f, 1.0f };
 	float position[] = { 0.0f, 0.0f, 0.0f, 1.0f };
-	float spotdir[] = { 0.5f, -0.5f, 0.5f };
+	float spotdir[] = { 0.0f, 0.0f, 0.0f, 1.0f };
 
 	glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
 	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
@@ -259,21 +269,31 @@ void setLights() {
 	glScalef(40, 40, 40);
 	renderLightSphere(diffuse);
 	glPopMatrix();
-}
 
-void setupflashlight(){
-	if (enableflashlight){
-	glEnable(GL_LIGHTING);
-	//setup light2 flashlight
-	float ambient[] = { 0.00f, 0.00f, 0.00f, 1.00f };
+	//spot
+	diffuse[0] = 0.8f;
+	diffuse[1] = 0.8f;
+	diffuse[2] = 1.0f;
 
-	float diffuse[] = { 1.0f, 1.0f, 0.6f, 1.0f };
-	float specular[] = { 1.0f, 1.0f, 0.6f, 1.0f };
-	float position[] = { 0.0f, 0.0f, 0.0f, 1.0f };
-	float spotdir[] = { 1.0f, 0.0f, 0.0f };
+	specular[0] = 0.8f;
+	specular[1] = 0.8f;
+	specular[2] = 1.0f;
+
+	position[0] = -eyeX;
+	position[1] = 1.5f;
+	position[2] = -eyeZ;
+	
+	glm::mat4 m = glm::rotate(glm::mat4(1.0f), rotationX, glm::vec3(0.0f, 0.0f, 1.0f));
+	m = glm::rotate(m, rotationY, glm::vec3(0.0f, 1.0f, 0.0f));
+	glm::vec4 t = glm::vec4(1.0, 0.0, 0.0, 1.0);
+	t = t*m;
+	t = glm::normalize(t);
+	spotdir[0] = t.x;
+	spotdir[1] = t.y;
+	spotdir[2] = t.z;
 
 	glEnable(GL_LIGHT2);
-	glLightf(GL_LIGHT2, GL_SPOT_CUTOFF, 20.0f);
+	glLightf(GL_LIGHT2, GL_SPOT_CUTOFF,15.0f);
 	glLightfv(GL_LIGHT2, GL_SPOT_DIRECTION, spotdir);
 	glLightfv(GL_LIGHT2, GL_AMBIENT, ambient);
 	glLightfv(GL_LIGHT2, GL_DIFFUSE, diffuse);
@@ -283,35 +303,7 @@ void setupflashlight(){
 	glTranslatef(0, 0.1, 0);
 	glLightfv(GL_LIGHT2, GL_POSITION, position);
 	glPopMatrix();
-	}
-	else{
-		glDisable(GL_LIGHT2);
-
-	}
-
-
-
-
-
 }
-
-
-/*
-void setCapeMaterial() {
-
-float zero[] = {0.0f, 0.0f, 0.0f, 1.0f};
-
-float ambient[] = {.1f,0,0, 1.0f};
-float diffuse[] = {.7f,0,0, 1.0f};
-float specular[] = {1,0,0, 1.0f};
-float emission[] = {.1f,0,0, 1.0f};
-
-glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, ambient);
-glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, diffuse);
-glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, specular);
-glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, emission);
-glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, materialShininess);
-}*/
 
 //GUI-HUD STUFF
 //prints text do display
@@ -350,11 +342,12 @@ void drawHUD(){
 	glDisable(GL_LIGHTING);
 
 	//draw here -1,-1 left bottom / 1,1 top right
+
 	print(-0.99, 0.9, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "SCORE: %d", score);
 	print(-0.99, 0.8, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "HP: %d", healthpoints);
 	print(-0.99, 0.7, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "Remaining: %d / %d", ReplicatorCount, ProjectileCount);
 	print(-0.99, 0.6, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "x: %f / z: %f", eyeX, eyeZ);
-	print(-0.99, 0.5, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "x: %d", enableflashlight);
+	print(-0.99, 0.5, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "x: %f / y: %f", rotationX, rotationY);
 
 	glEnable(GL_LIGHTING);
 	glEnable(GL_DEPTH_TEST);
@@ -364,7 +357,115 @@ void drawHUD(){
 	glPopMatrix();
 }
 
+void drawMenu(){
+	glUseProgram(simpleshaderprogram);
+	glUniform4f(glGetUniformLocation(simpleshaderprogram, "mycolor"), 1.0, 1.0, 1.0, 1.0);
+	glUniform1i(glGetUniformLocation(simpleshaderprogram, "mytexture"), 5);
 
+	glMatrixMode(GL_PROJECTION);
+	glPushMatrix();
+	glLoadIdentity();
+	glOrtho(0, windowWidth, windowHeight, 0, -1, 1);
+	glMatrixMode(GL_MODELVIEW);
+	glPushMatrix();
+	glLoadIdentity();
+	glDepthMask(GL_FALSE);  // disable writes to Z-Buffer
+	glDisable(GL_DEPTH_TEST);
+	glDisable(GL_LIGHTING);
+
+	//draw here -1,-1 left bottom / 1,1 top right
+
+	glPushMatrix();
+	glEnable(GL_COLOR_MATERIAL); //use vertex colors instead of material colors
+	glColorMaterial(GL_FRONT_AND_BACK, GL_DIFFUSE); //use the vertex color as diffuse color
+
+	glEnable(GL_TEXTURE_2D); //enable texturing
+
+	tex4->bind(5);
+
+	glBegin(GL_QUADS);
+	glColor4f(1, 1, 1, 1);
+	glTexCoord2f(0.0, 0.0);
+	glVertex2f(-1.0, -1.0);
+
+	glTexCoord2f(1.0, 0.0);
+	glVertex2f(1.0, -1.0);
+
+	glTexCoord2f(1.0, 1.0);
+	glVertex2f(1.0, 1.0);
+
+	glTexCoord2f(0.0, 1.0);
+	glVertex2f(-1.0, 1.0);
+	glEnd();
+
+	tex4->unbind();
+	tex2->bind(5);
+	glBegin(GL_QUADS);
+	glColor4f(1, 1, 1, 1);
+	glTexCoord2f(0.0, 0.0);
+	glVertex2f(-0.5, 0.25);
+
+	glTexCoord2f(1.0, 0.0);
+	glVertex2f(0.5, 0.25);
+
+	glTexCoord2f(1.0, 1.0);
+	glVertex2f(0.5, 0.5);
+
+	glTexCoord2f(0.0, 1.0);
+	glVertex2f(-0.5, 0.5);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor4f(1, 1, 1, 1);
+	glTexCoord2f(0.0, 0.0);
+	glVertex2f(-0.5, -0.125);
+
+	glTexCoord2f(1.0, 0.0);
+	glVertex2f(0.5, -0.125);
+
+	glTexCoord2f(1.0, 1.0);
+	glVertex2f(0.5, 0.125);
+
+	glTexCoord2f(0.0, 1.0);
+	glVertex2f(-0.5, 0.125);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor4f(1, 1, 1, 1);
+	glTexCoord2f(0.0, 0.0);
+	glVertex2f(-0.5, -0.5);
+
+	glTexCoord2f(1.0, 0.0);
+	glVertex2f(0.5, -0.5);
+
+	glTexCoord2f(1.0, 1.0);
+	glVertex2f(0.5, -0.25);
+
+	glTexCoord2f(0.0, 1.0);
+	glVertex2f(-0.5, -0.25);
+	glEnd();
+
+	tex2->unbind();
+
+	//disable enabled features again
+	glDisable(GL_TEXTURE_2D);
+	glDisable(GL_COLOR_MATERIAL);
+
+	glPopMatrix();
+	glUseProgram(0);
+	glPushMatrix();
+	print(-0.15, 0.35, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "Return to Game");
+	print(-0.075, -0.025, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "Restart");
+	print(-0.05, -0.4, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "Exit");
+
+	glPopMatrix();
+	glEnable(GL_LIGHTING);
+	glEnable(GL_DEPTH_TEST);
+	glDepthMask(GL_TRUE);
+	glPopMatrix();
+	glMatrixMode(GL_PROJECTION);
+	glPopMatrix();
+}
 /*
 void renderVader() {
 glPushMatrix();
@@ -468,17 +569,17 @@ void renderFloor(){
 	//unten:
 	glBegin(GL_TRIANGLE_STRIP);
 	glNormal3f(0, 1, 0);
-	glTexCoord2f(0.0, depth/2.0);
+	glTexCoord2f(0.0, depth / 2.0);
 	glVertex3f(links, unten, hinten);
 	glTexCoord2f(0.0, 0.0);
 	glVertex3f(links, unten, vorne);
-	glTexCoord2f(width/2.0, depth/2.0);
+	glTexCoord2f(width / 2.0, depth / 2.0);
 	glVertex3f(rechts, unten, hinten);
-	glTexCoord2f(width/2.0, 0.0);
+	glTexCoord2f(width / 2.0, 0.0);
 	glVertex3f(rechts, unten, vorne);
 	glEnd();
 	tex1->unbind();
-	
+
 
 	//disable enabled features again
 	glDisable(GL_TEXTURE_2D);
@@ -504,7 +605,7 @@ void setMapMaterial() {
 }
 
 //PROJECTILE STUFF
-void addProjectile(int x, int y, int z,float tilt, float rot){
+void addProjectile(int x, int y, int z, float tilt, float rot){
 	int i;
 	if (ProjectileCount < PROJECTILE_MAX)
 		for (i = 0; i < PROJECTILE_MAX; i++){
@@ -515,7 +616,7 @@ void addProjectile(int x, int y, int z,float tilt, float rot){
 			}
 		}
 
-	
+
 }
 
 void RemoveProjectile(int index){
@@ -545,7 +646,7 @@ void renderProjectiles(){
 		if (Projectiles[i] != NULL){
 			glPushMatrix();
 			glTranslatef(Projectiles[i]->x, Projectiles[i]->y, Projectiles[i]->z);
-			glColor4f(0,0,0,1);
+			glColor4f(0, 0, 0, 1);
 			glutSolidSphere(.03, 10, 10);
 			glPopMatrix();
 		}
@@ -794,74 +895,49 @@ void renderReplicators(){
  * called when a frame should be rendered
  */
 void display() {
-	glutWarpPointer(glutGet(GLUT_WINDOW_WIDTH)*0.5, glutGet(GLUT_WINDOW_HEIGHT)*0.5);
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-	// set vantage point
-	gluLookAt(0.0, 0.0, 0.0, 4.0, 0.0, 0.0, 0.0, 1.0, 0.0);
-	setupflashlight();
-	// add rotation
-	//rotation z(neigung)
-	glRotatef(rotationX, 0.0f, 0.0f, 1.0f);
-	//rotation y(drehung)
-	glRotatef(rotationY, 0.0f, 1.0f, 0.0f);
+	if (!isinmenu){
+		glutSetCursor(GLUT_CURSOR_CROSSHAIR);
+		glutWarpPointer(glutGet(GLUT_WINDOW_WIDTH)*0.5, glutGet(GLUT_WINDOW_HEIGHT)*0.5);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+		// set vantage point
+		gluLookAt(0.0, 0.0, 0.0, 4.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+		
+		// add rotation
+		//rotation z(neigung)
+		glRotatef(rotationX, 0.0f, 0.0f, 1.0f);
+		//rotation y(drehung)
+		glRotatef(rotationY, 0.0f, 1.0f, 0.0f);
 
-	//translate scene
-	glTranslatef(eyeX, -1.5, eyeZ);
+		//translate scene
+		glTranslatef(eyeX, -1.5, eyeZ);
 
-	// Map from (0,0,0) to (64,0,64) coordinates, 1 equals about 1m
+		// set specific light properties
+		setLights();
+		glUseProgram(phongshaderprogram);
+		glUniform4f(glGetUniformLocation(phongshaderprogram, "mycolor"), 1.0, 1.0, 1.0, 1.0);
+		glUniform1i(glGetUniformLocation(phongshaderprogram, "mytexture"), 5);
+		glUniform1i(glGetUniformLocation(phongshaderprogram, "enablespot"), enableflashlight);
 
-	// set specific light properties
-	setLights();
+		//renders all axisting replicators
+		renderReplicators();
 
-	glUseProgram(phongshaderprogram);
-
-	//renderVader();
-
-	glUniform4f(glGetUniformLocation(phongshaderprogram, "mycolor"), 1.0, 1.0, 1.0, 1.0);
-	glUniform1i(glGetUniformLocation(phongshaderprogram, "mytexture"), 5);
-	glUniform1i(glGetUniformLocation(phongshaderprogram, "enablespot"), enableflashlight);
-
-	renderReplicators();
-	
-	setMapMaterial();
-	renderFloor();
-	glUseProgram(0);
-	renderProjectiles();
-	drawHUD();
-
-	//render floor with our simple shader (light is ignored)
-	//if(useSimpleShader)
-	//{
-	//	glUseProgram(simpleshaderprogram);
-
-	//	/*
-	//	Examples for setting uniform parameters in a shader program:
-
-	//	Get Index of uniform parameter:
-	//		glGetUniformLocation(program,"name")
-
-	//	set uniform float:
-	//		glUniform1f(glGetUniformLocation(program,"name") ,1.0);
-
-	//	set uniform int (or texture unit):
-	//		glUniform1i(glGetUniformLocation(program,"name") , 1);
-
-	//	set uniform vec4 with 4 values:
-	//		glUniform4f(glGetUniformLocation(program,"name") ,1.0,1.0,1.0,1.0);
-
-	//	*/
-
-	//	glUniform4f(glGetUniformLocation(simpleshaderprogram,"mycolor"),1.0,0.0,0.0,1.0);
-	//	glUniform1i(glGetUniformLocation(simpleshaderprogram,"mytexture"),5);
-	//	glUniform1f(glGetUniformLocation(simpleshaderprogram,"wobbletime"),wobbletime);
-	//}
-
-	////renderFloor();
-
-	//if(useSimpleShader)
-	//	glUseProgram(0);
+		//sets material for map
+		setMapMaterial();
+		//renders map
+		renderFloor();
+		glUseProgram(0);
+		//renders all projectiles
+		renderProjectiles();
+		//renders hud
+		drawHUD();
+	}
+	else{
+		//renders menu
+		glutSetCursor(GLUT_CURSOR_INHERIT);
+		drawMenu();
+	}
 
 	LOG_GL_ERRORS();
 	glutSwapBuffers();
@@ -903,7 +979,7 @@ void idle() {
 void keyboard(unsigned char key, int x, int y) {
 	switch (key) {
 	case 27: //27=esc
-		exit(0);
+		isinmenu = !isinmenu;
 		break;
 	case 'p':
 		gamerunning = !gamerunning;
@@ -911,13 +987,12 @@ void keyboard(unsigned char key, int x, int y) {
 	case 'l':
 		enableflashlight = !enableflashlight;
 		break;
-	case 'a':
-		break;
 	}
 	glutPostRedisplay();
 }
 
 void special(int key, int x, int y) {
+	if (!isinmenu)
 	switch (key) {
 	case GLUT_KEY_UP:
 		eyeZ -= PLAYER_SPEED*sinf(rotationY*M_PI / 180.0);
@@ -946,13 +1021,31 @@ void special(int key, int x, int y) {
  * @param y mouse y position in pixel relative to the window, when the mouse button was pressed
  */
 void mouse(int button, int state, int x, int y) {
+	
+	if (leftMouseButtonDown && button == GLUT_LEFT_BUTTON && state == GLUT_UP){
+		if (!isinmenu){
+			addProjectile(-eyeX, 1.5, -eyeZ, rotationX, rotationY);
+			glutPostRedisplay();
+		}
+		else{
+			if (x <= glutGet(GLUT_WINDOW_WIDTH)*0.75 && x >= glutGet(GLUT_WINDOW_WIDTH)*0.25){
+				if (y <= glutGet(GLUT_WINDOW_HEIGHT)*0.375 && y >= glutGet(GLUT_WINDOW_HEIGHT)*0.25){
+					glutWarpPointer(glutGet(GLUT_WINDOW_WIDTH)*0.5, glutGet(GLUT_WINDOW_HEIGHT)*0.5);
+					isinmenu = false;
+					glutPostRedisplay();
+				}
+				else if (y <= glutGet(GLUT_WINDOW_HEIGHT)*0.5625 && y >= glutGet(GLUT_WINDOW_HEIGHT)*0.4375){
+					glutWarpPointer(glutGet(GLUT_WINDOW_WIDTH)*0.5, glutGet(GLUT_WINDOW_HEIGHT)*0.5);
+					isinmenu = false;
+					glutPostRedisplay();
+				}
+				else if (y <= glutGet(GLUT_WINDOW_HEIGHT)*0.75 && y >= glutGet(GLUT_WINDOW_HEIGHT)*0.625){
+					exit(0);
+				}
+			}
+		}
+	}
 	leftMouseButtonDown = (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN);
-	//if (leftMouseButtonDown && (button == GLUT_LEFT_BUTTON && state != GLUT_DOWN)){
-		addProjectile(-eyeX, 1.5, -eyeZ, rotationX, rotationY);
-	//}
-	//mousePosX = x;
-	//mousePosY = y;
-	//glutPostRedisplay();
 }
 
 /**
@@ -961,49 +1054,50 @@ void mouse(int button, int state, int x, int y) {
  * @param y mouse x position in pixel relative to the window
  */
 void passiveMouseMotion(int x, int y) {
-	//if (leftMouseButtonDown) {
-	rotationY -= glutGet(GLUT_WINDOW_WIDTH)*0.5 - x;
-	rotationX -= glutGet(GLUT_WINDOW_HEIGHT)*0.5 - y;
-	if (rotationX >= 90) rotationX = 90;
-	else if (rotationX <= -90) rotationX = -90;
-
-	//}
+	if (!isinmenu) {
+		rotationY -= glutGet(GLUT_WINDOW_WIDTH)*0.5 - x;
+		rotationX -= glutGet(GLUT_WINDOW_HEIGHT)*0.5 - y;
+		if (rotationX >= 90) rotationX = 90;
+		else if (rotationX <= -90) rotationX = -90;
+	}
 }
 
 //MAIN
 
 void update(int value) {
-
-	if (moveLight)
-	{
-		angle += 1.0f;
-		if (angle > 360)
-			angle -= 360;
-	}
-	wobbletime += 0.1f;
-	if (gamerunning){
-		if (repl_ani_dir_up){
-			repl_ani_state += 0.2f;
-			if (repl_ani_state > 1){
-				repl_ani_state = 1.0f;
-				repl_ani_dir_up = false;
-			}
+	if (!isinmenu){
+		if (moveLight)
+		{
+			angle += 1.0f;
+			if (angle > 360)
+				angle -= 360;
 		}
-		else{
-			repl_ani_state -= 0.2f;
-			if (repl_ani_state < -1){
-				repl_ani_state = -1.0f;
-				repl_ani_dir_up = true;
+		wobbletime += 0.1f;
+		if (gamerunning){
+			if (repl_ani_dir_up){
+				repl_ani_state += 0.2f;
+				if (repl_ani_state > 1){
+					repl_ani_state = 1.0f;
+					repl_ani_dir_up = false;
+				}
 			}
-		}
-		//calculate angels
-		repl_side_bf = 25 * repl_ani_state;
-		repl_side_ud_left = 10 * (!repl_ani_dir_up ? abs(repl_ani_state) : 1) - 10;
-		repl_side_ud_right = 10 * (repl_ani_dir_up ? abs(repl_ani_state) : 1) - 10;
+			else{
+				repl_ani_state -= 0.2f;
+				if (repl_ani_state < -1){
+					repl_ani_state = -1.0f;
+					repl_ani_dir_up = true;
+				}
+			}
+			//calculate angels
+			repl_side_bf = 25 * repl_ani_state;
+			repl_side_ud_left = 10 * (!repl_ani_dir_up ? abs(repl_ani_state) : 1) - 10;
+			repl_side_ud_right = 10 * (repl_ani_dir_up ? abs(repl_ani_state) : 1) - 10;
 
-		moveProjectiles();
-		replicatorLogic();
+			moveProjectiles();
+			replicatorLogic();
+		}
 	}
+
 	glutPostRedisplay();
 
 	//call update method in 25ms
