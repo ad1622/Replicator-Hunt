@@ -23,7 +23,7 @@
 #define M_PI 3.1415926535897932384626433832795
 #define PLAYER_SPEED 0.25
 #define REPLICATOR_SPEED 0.02
-#define PROJECTILE_SPEED 0.2
+#define PROJECTILE_SPEED 0.4
 
 int windowWidth, windowHeight;
 
@@ -47,8 +47,6 @@ GLuint phongshaderprogram;
 
 bool moveLight = true;	//move light
 bool enableflashlight = false;
-//bool useSimpleShader = true; //use simple shader
-float materialShininess = 64.0;   //material shininess
 
 //rotation of sun
 float angle = 0;
@@ -91,6 +89,9 @@ int PROJECTILE_MAX = 25;
 
 void cleanup();
 void addReplicator(float x, float z, int rot);
+void RemoveProjectile(int index);
+void removeReplicator(int index);
+void initgame();
 
 void initSimpleShader()
 {
@@ -170,13 +171,7 @@ void init() {
 	tex3 = oogl::loadTexture("models/Concrete.png");
 	tex4 = oogl::loadTexture("models/Concrete.png");
 
-	ReplicatorCount = 0;
 
-	addReplicator(0, 0, 0);
-	addReplicator(0, 0, 22);
-	addReplicator(0, 0, 45);
-	addReplicator(0, 0, 68);
-	addReplicator(0, 0, 90);
 
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LESS);
@@ -190,6 +185,34 @@ void init() {
 
 	//sky color = blue
 	glClearColor(0.4f, 0.4f, 1.0f, 1.0f);
+	initgame();
+}
+
+void initgame(){
+	isinmenu = false;
+	gamerunning = true;
+
+	int i;
+	if (ProjectileCount != 0)
+		for (i = 0; i < PROJECTILE_MAX; i++){
+			if (Projectiles[i] != NULL)
+				RemoveProjectile(i);
+		}
+
+	if (ReplicatorCount != 0)
+		for (i = 0; i < REPLICATOR_MAX; i++){
+			if (Replicators[i] != NULL)
+				removeReplicator(i);
+		}
+
+	ReplicatorCount = 0;
+	ProjectileCount = 0;
+
+	addReplicator(0, 0, 0);
+	addReplicator(0, 0, 22);
+	addReplicator(0, 0, 45);
+	addReplicator(0, 0, 68);
+	addReplicator(0, 0, 90);
 }
 
 void cleanup() {
@@ -227,8 +250,8 @@ void setLights() {
 	//setup light0 (SUN)
 	float ambient[] = { 0.05f, 0.05f, 0.05f, 1.00f };
 
-	float diffuse[] = { 1.0f, 1.0f, 0.6f, 1.0f };
-	float specular[] = { 1.0f, 1.0f, 0.6f, 1.0f };
+	float diffuse[] = { 1.0f, 1.0f, 0.7f, 1.0f };
+	float specular[] = { 1.0f, 1.0f, 0.7f, 1.0f };
 	float position[] = { 0.0f, 0.0f, 0.0f, 1.0f };
 	float spotdir[] = { 0.0f, 0.0f, 0.0f, 1.0f };
 
@@ -271,18 +294,18 @@ void setLights() {
 	glPopMatrix();
 
 	//spot
-	diffuse[0] = 0.8f;
-	diffuse[1] = 0.8f;
+	diffuse[0] = 1.0f;
+	diffuse[1] = 1.0f;
 	diffuse[2] = 1.0f;
 
-	specular[0] = 0.8f;
-	specular[1] = 0.8f;
+	specular[0] = 1.0f;
+	specular[1] = 1.0f;
 	specular[2] = 1.0f;
 
 	position[0] = -eyeX;
 	position[1] = 1.5f;
 	position[2] = -eyeZ;
-	
+
 	glm::mat4 m = glm::rotate(glm::mat4(1.0f), rotationX, glm::vec3(0.0f, 0.0f, 1.0f));
 	m = glm::rotate(m, rotationY, glm::vec3(0.0f, 1.0f, 0.0f));
 	glm::vec4 t = glm::vec4(1.0, 0.0, 0.0, 1.0);
@@ -293,7 +316,7 @@ void setLights() {
 	spotdir[2] = t.z;
 
 	glEnable(GL_LIGHT2);
-	glLightf(GL_LIGHT2, GL_SPOT_CUTOFF,15.0f);
+	glLightf(GL_LIGHT2, GL_SPOT_CUTOFF, 15.0f);
 	glLightfv(GL_LIGHT2, GL_SPOT_DIRECTION, spotdir);
 	glLightfv(GL_LIGHT2, GL_AMBIENT, ambient);
 	glLightfv(GL_LIGHT2, GL_DIFFUSE, diffuse);
@@ -345,9 +368,9 @@ void drawHUD(){
 
 	print(-0.99, 0.9, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "SCORE: %d", score);
 	print(-0.99, 0.8, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "HP: %d", healthpoints);
-	print(-0.99, 0.7, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "Remaining: %d / %d", ReplicatorCount, ProjectileCount);
+	print(-0.99, 0.7, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "Replicators: %d /Projectiles: %d", ReplicatorCount, ProjectileCount);
 	print(-0.99, 0.6, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "x: %f / z: %f", eyeX, eyeZ);
-	print(-0.99, 0.5, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "x: %f / y: %f", rotationX, rotationY);
+	print(-0.99, 0.5, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "neigung: %f / drehung: %f", rotationX, rotationY);
 
 	glEnable(GL_LIGHTING);
 	glEnable(GL_DEPTH_TEST);
@@ -594,18 +617,18 @@ void setMapMaterial() {
 
 	float ambient[] = { .2f, 0.2, 0.2, 1.0f };
 	float diffuse[] = { 0.65, 0.65, 0.65, 1.0f };
-	float specular[] = { 0.0, .0, 0.0, 1.0f };
+	float specular[] = { 0.3, 0.3, 0.3, 1.0f };
 	float emission[] = { .0f, .0f, .0f, 1.0f };
 
 	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, ambient);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, diffuse);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, specular);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, emission);
-	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, materialShininess);
+	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, 155.0);
 }
 
 //PROJECTILE STUFF
-void addProjectile(int x, int y, int z, float tilt, float rot){
+void addProjectile(float x, float y, float z, float tilt, float rot){
 	int i;
 	if (ProjectileCount < PROJECTILE_MAX)
 		for (i = 0; i < PROJECTILE_MAX; i++){
@@ -615,8 +638,6 @@ void addProjectile(int x, int y, int z, float tilt, float rot){
 				break;
 			}
 		}
-
-
 }
 
 void RemoveProjectile(int index){
@@ -693,13 +714,13 @@ void setReplMaterial() {
 	float ambient[] = { .2f, 0.2, 0.2, 1.0f };
 	float diffuse[] = { 0.65, 0.65, 0.65, 1.0f };
 	float specular[] = { 0.65, 0.65, 0.65, 1.0f };
-	float emission[] = { .1f, .1f, .1f, 1.0f };
+	float emission[] = { .5f, .5f, .5f, 1.0f };
 
 	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, ambient);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, diffuse);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, specular);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, emission);
-	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, materialShininess);
+	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, 32.0);
 }
 
 void renderCellStrip(int length, float width, float depth){
@@ -903,7 +924,7 @@ void display() {
 		glLoadIdentity();
 		// set vantage point
 		gluLookAt(0.0, 0.0, 0.0, 4.0, 0.0, 0.0, 0.0, 1.0, 0.0);
-		
+
 		// add rotation
 		//rotation z(neigung)
 		glRotatef(rotationX, 0.0f, 0.0f, 1.0f);
@@ -953,7 +974,7 @@ void reshape(int w, int h) {
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(60, ((float)w) / h, 1, 300);
+	gluPerspective(60, ((float)w) / h, 0.5, 300);
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
@@ -993,23 +1014,23 @@ void keyboard(unsigned char key, int x, int y) {
 
 void special(int key, int x, int y) {
 	if (!isinmenu)
-	switch (key) {
-	case GLUT_KEY_UP:
-		eyeZ -= PLAYER_SPEED*sinf(rotationY*M_PI / 180.0);
-		eyeX -= PLAYER_SPEED*cosf(rotationY*M_PI / 180.0);
-		break;
-	case GLUT_KEY_DOWN:
-		eyeZ += PLAYER_SPEED*sinf(rotationY*M_PI / 180.0);
-		eyeX += PLAYER_SPEED*cosf(rotationY*M_PI / 180.0);
-		break;
-	case GLUT_KEY_LEFT:
-		eyeZ -= PLAYER_SPEED*sinf((rotationY - 90.0)*M_PI / 180.0);
-		eyeX -= PLAYER_SPEED*cosf((rotationY - 90.0)*M_PI / 180.0);
-		break;
-	case GLUT_KEY_RIGHT:
-		eyeZ -= PLAYER_SPEED*sinf((rotationY + 90.0)*M_PI / 180.0);
-		eyeX -= PLAYER_SPEED*cosf((rotationY + 90.0)*M_PI / 180.0);
-		break;
+		switch (key) {
+		case GLUT_KEY_UP:
+			eyeZ -= PLAYER_SPEED*sinf(rotationY*M_PI / 180.0);
+			eyeX -= PLAYER_SPEED*cosf(rotationY*M_PI / 180.0);
+			break;
+		case GLUT_KEY_DOWN:
+			eyeZ += PLAYER_SPEED*sinf(rotationY*M_PI / 180.0);
+			eyeX += PLAYER_SPEED*cosf(rotationY*M_PI / 180.0);
+			break;
+		case GLUT_KEY_LEFT:
+			eyeZ -= PLAYER_SPEED*sinf((rotationY - 90.0)*M_PI / 180.0);
+			eyeX -= PLAYER_SPEED*cosf((rotationY - 90.0)*M_PI / 180.0);
+			break;
+		case GLUT_KEY_RIGHT:
+			eyeZ -= PLAYER_SPEED*sinf((rotationY + 90.0)*M_PI / 180.0);
+			eyeX -= PLAYER_SPEED*cosf((rotationY + 90.0)*M_PI / 180.0);
+			break;
 	}
 }
 
@@ -1021,7 +1042,7 @@ void special(int key, int x, int y) {
  * @param y mouse y position in pixel relative to the window, when the mouse button was pressed
  */
 void mouse(int button, int state, int x, int y) {
-	
+
 	if (leftMouseButtonDown && button == GLUT_LEFT_BUTTON && state == GLUT_UP){
 		if (!isinmenu){
 			addProjectile(-eyeX, 1.5, -eyeZ, rotationX, rotationY);
@@ -1035,8 +1056,7 @@ void mouse(int button, int state, int x, int y) {
 					glutPostRedisplay();
 				}
 				else if (y <= glutGet(GLUT_WINDOW_HEIGHT)*0.5625 && y >= glutGet(GLUT_WINDOW_HEIGHT)*0.4375){
-					glutWarpPointer(glutGet(GLUT_WINDOW_WIDTH)*0.5, glutGet(GLUT_WINDOW_HEIGHT)*0.5);
-					isinmenu = false;
+					initgame();
 					glutPostRedisplay();
 				}
 				else if (y <= glutGet(GLUT_WINDOW_HEIGHT)*0.75 && y >= glutGet(GLUT_WINDOW_HEIGHT)*0.625){
