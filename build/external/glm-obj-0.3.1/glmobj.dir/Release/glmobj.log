@@ -1,0 +1,186 @@
+﻿Build started 19.06.2014 14:25:46.
+     1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\glmobj.vcxproj" on node 3 (Rebuild target(s)).
+     1>CustomBuild:
+         Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt
+         CMake does not need to re-run because D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1" /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1" /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include" /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D HAVE_DEVIL /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"glmobj.dir\Release\\" /Fd"glmobj.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\..\external\glm-obj-0.3.1\glm\glm.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg_devil.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg_jpg.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg_png.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg_sdl.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glmimg_sim.cpp" "..\..\..\external\glm-obj-0.3.1\glm\glm_util.cpp"
+         glm.cpp
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(267): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(112) : see declaration of 'strcpy'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(268): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(118) : see declaration of 'strcat'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(275): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : see declaration of 'strdup'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(304): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(112) : see declaration of 'strcpy'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(305): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(118) : see declaration of 'strcat'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(307): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(316): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(327): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(345): warning C4305: '=' : truncation from 'double' to 'GLfloat'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(346): warning C4305: '=' : truncation from 'double' to 'GLfloat'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(347): warning C4305: '=' : truncation from 'double' to 'GLfloat'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(349): warning C4305: '=' : truncation from 'double' to 'GLfloat'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(350): warning C4305: '=' : truncation from 'double' to 'GLfloat'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(351): warning C4305: '=' : truncation from 'double' to 'GLfloat'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(363): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(387): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(394): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(418): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(424): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(430): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(444): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(463): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(515): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(112) : see declaration of 'strcpy'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(516): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(118) : see declaration of 'strcat'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(520): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(573): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(605): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(627): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(631): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(632): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(633): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(636): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(640): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(642): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(643): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(646): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(650): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(652): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(653): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(656): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(662): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(663): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(666): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(727): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(739): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(746): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(752): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(759): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(789): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(793): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(797): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(801): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(807): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(823): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(828): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(832): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(838): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(854): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(859): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(863): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(869): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(887): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(891): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(895): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(901): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(230) : see declaration of 'fscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(985): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(986): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(987): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(990): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(1192): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(1279): warning C4390: ';' : empty controlled statement found; is this the intent?
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(1400): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(1406): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(1407): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(1465): warning C4305: '=' : truncation from 'double' to 'GLfloat'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(1470): warning C4305: '=' : truncation from 'double' to 'GLfloat'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(1472): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(1475): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(1476): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(1549): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(1606): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm.cpp(1690): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+         glmimg.cpp
+     1>..\..\..\external\glm-obj-0.3.1\glm\glmimg.cpp(141): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glmimg.cpp(162): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glmimg.cpp(164): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glmimg.cpp(166): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>..\..\..\external\glm-obj-0.3.1\glm\glmimg.cpp(395): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>..\..\..\external\glm-obj-0.3.1\glm\glmimg.cpp(396): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
+         glmimg_devil.cpp
+         glmimg_jpg.cpp
+         glmimg_png.cpp
+         glmimg_sdl.cpp
+         glmimg_sim.cpp
+         glm_util.cpp
+     1>..\..\..\external\glm-obj-0.3.1\glm\glm_util.cpp(24): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(112) : see declaration of 'strcpy'
+         Generating Code...
+       Lib:
+         E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\lib\Release\glmobj.lib" /NOLOGO glmobj.dir\Release\glm.obj
+         glmobj.dir\Release\glmimg.obj
+         glmobj.dir\Release\glmimg_devil.obj
+         glmobj.dir\Release\glmimg_jpg.obj
+         glmobj.dir\Release\glmimg_png.obj
+         glmobj.dir\Release\glmimg_sdl.obj
+         glmobj.dir\Release\glmimg_sim.obj
+         glmobj.dir\Release\glm_util.obj
+         glmobj.vcxproj -> D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\lib\Release\glmobj.lib
+     1>Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\glmobj.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.44

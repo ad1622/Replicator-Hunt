@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{68963506-C131-49B0-AC7C-5327E760EECB}</ProjectGUID>
+    <ProjectGUID>{CEDDA907-5256-4303-9BFB-B8B92A2C6519}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>lib3ds</ProjectName>
@@ -332,7 +332,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/ZERO_CHECK.vcxproj">
-      <Project>09B0C508-4A9C-4BA1-98DB-AAF9D8DB699D</Project>
+      <Project>15143D15-524D-42B0-B2D3-019DCC708421</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

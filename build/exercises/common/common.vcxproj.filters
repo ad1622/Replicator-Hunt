@@ -111,13 +111,13 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="oogl\model">
-      <UniqueIdentifier>{E7A77ECB-DB2F-4B0E-94E3-4871B96F1AA7}</UniqueIdentifier>
+      <UniqueIdentifier>{D7EA1C41-5A28-486A-9800-18EF98DCF49D}</UniqueIdentifier>
     </Filter>
     <Filter Include="oogl">
-      <UniqueIdentifier>{97FD736C-D43B-4FF5-A773-5663CE43E1D1}</UniqueIdentifier>
+      <UniqueIdentifier>{D81D00EB-D816-449A-B981-D7EEB5E49155}</UniqueIdentifier>
     </Filter>
     <Filter Include="utils">
-      <UniqueIdentifier>{04685FC1-0BBA-4B2A-9966-3F8BC2C3E739}</UniqueIdentifier>
+      <UniqueIdentifier>{FA304315-C1DB-47C4-AB6F-807E98407120}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

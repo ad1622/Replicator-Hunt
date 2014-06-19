@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{B6FC7BDC-5B0C-4F2A-BF70-E7B1EB4F2DF7}</ProjectGUID>
+    <ProjectGUID>{0878B975-E2BF-41CF-B48E-CA909ED2E47F}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>GLee</ProjectName>
@@ -253,7 +253,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/ZERO_CHECK.vcxproj">
-      <Project>09B0C508-4A9C-4BA1-98DB-AAF9D8DB699D</Project>
+      <Project>15143D15-524D-42B0-B2D3-019DCC708421</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

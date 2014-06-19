@@ -1,4 +1,4 @@
-﻿Build started 18.06.2014 22:48:17.
+﻿Build started 19.06.2014 14:23:18.
      1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\lib3ds.vcxproj" on node 4 (Build target(s)).
      1>CustomBuild:
          Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt
@@ -51,4 +51,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.86
+Time Elapsed 00:00:02.16

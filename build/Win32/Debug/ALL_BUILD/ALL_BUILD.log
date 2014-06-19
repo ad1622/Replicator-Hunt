@@ -1,0 +1,11 @@
+﻿Build started 19.06.2014 14:23:37.
+     1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\ALL_BUILD.vcxproj" on node 2 (Build target(s)).
+     1>CustomBuild:
+         Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/CMakeLists.txt
+         CMake does not need to re-run because D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\generate.stamp is up-to-date.
+         Build all projects
+     1>Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\ALL_BUILD.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.25

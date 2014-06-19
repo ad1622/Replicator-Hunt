@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{F337D77E-7012-4703-A936-5C01A30023BD}</ProjectGUID>
+    <ProjectGUID>{EA2D2E74-9BB3-4D87-AE3A-E5FEF8D0921B}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>glmobj</ProjectName>
@@ -261,7 +261,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/ZERO_CHECK.vcxproj">
-      <Project>09B0C508-4A9C-4BA1-98DB-AAF9D8DB699D</Project>
+      <Project>15143D15-524D-42B0-B2D3-019DCC708421</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

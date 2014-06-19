@@ -40,7 +40,6 @@ oogl::Model *vaderCape = NULL;
 oogl::Texture* tex1 = NULL;
 oogl::Texture* tex2 = NULL;
 oogl::Texture* tex3 = NULL;
-oogl::Texture* tex4 = NULL;
 
 GLuint simpleshaderprogram;
 GLuint phongshaderprogram;
@@ -169,7 +168,6 @@ void init() {
 	tex1 = oogl::loadTexture("models/Gravel.png");
 	tex2 = oogl::loadTexture("models/ReplBlock.jpg");
 	tex3 = oogl::loadTexture("models/Concrete.png");
-	tex4 = oogl::loadTexture("models/Concrete.png");
 
 
 
@@ -222,7 +220,6 @@ void cleanup() {
 	delete tex1;
 	delete tex2;
 	delete tex3;
-	delete tex4;
 
 	if (simpleshaderprogram > 0)
 		glDeleteProgram(simpleshaderprogram);
@@ -404,7 +401,7 @@ void drawMenu(){
 
 	glEnable(GL_TEXTURE_2D); //enable texturing
 
-	tex4->bind(5);
+	tex3->bind(5);
 
 	glBegin(GL_QUADS);
 	glColor4f(1, 1, 1, 1);
@@ -421,17 +418,17 @@ void drawMenu(){
 	glVertex2f(-1.0, 1.0);
 	glEnd();
 
-	tex4->unbind();
-	tex2->bind(5);
+	tex3->unbind();
+	tex1->bind(5);
 	glBegin(GL_QUADS);
 	glColor4f(1, 1, 1, 1);
 	glTexCoord2f(0.0, 0.0);
 	glVertex2f(-0.5, 0.25);
 
-	glTexCoord2f(1.0, 0.0);
+	glTexCoord2f(5.0, 0.0);
 	glVertex2f(0.5, 0.25);
 
-	glTexCoord2f(1.0, 1.0);
+	glTexCoord2f(5.0, 1.0);
 	glVertex2f(0.5, 0.5);
 
 	glTexCoord2f(0.0, 1.0);
@@ -443,10 +440,10 @@ void drawMenu(){
 	glTexCoord2f(0.0, 0.0);
 	glVertex2f(-0.5, -0.125);
 
-	glTexCoord2f(1.0, 0.0);
+	glTexCoord2f(5.0, 0.0);
 	glVertex2f(0.5, -0.125);
 
-	glTexCoord2f(1.0, 1.0);
+	glTexCoord2f(5.0, 1.0);
 	glVertex2f(0.5, 0.125);
 
 	glTexCoord2f(0.0, 1.0);
@@ -458,17 +455,17 @@ void drawMenu(){
 	glTexCoord2f(0.0, 0.0);
 	glVertex2f(-0.5, -0.5);
 
-	glTexCoord2f(1.0, 0.0);
+	glTexCoord2f(5.0, 0.0);
 	glVertex2f(0.5, -0.5);
 
-	glTexCoord2f(1.0, 1.0);
+	glTexCoord2f(5.0, 1.0);
 	glVertex2f(0.5, -0.25);
 
 	glTexCoord2f(0.0, 1.0);
 	glVertex2f(-0.5, -0.25);
 	glEnd();
 
-	tex2->unbind();
+	tex1->unbind();
 
 	//disable enabled features again
 	glDisable(GL_TEXTURE_2D);
@@ -974,7 +971,7 @@ void reshape(int w, int h) {
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(60, ((float)w) / h, 0.5, 300);
+	gluPerspective(60, ((float)w) / h, 0.25, 300);
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();

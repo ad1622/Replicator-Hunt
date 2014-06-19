@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{17521B81-593A-4FA0-A813-2E51E27F466D}</ProjectGUID>
+    <ProjectGUID>{91F07D9A-D94A-44D5-8457-E22E01BFB188}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>INSTALL</ProjectName>
@@ -208,7 +208,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/ALL_BUILD.vcxproj">
-      <Project>717F1A99-77F6-45C2-AE2B-53C236E86E4D</Project>
+      <Project>587A7E0D-40F3-4BC3-BF73-838D6DC890D4</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

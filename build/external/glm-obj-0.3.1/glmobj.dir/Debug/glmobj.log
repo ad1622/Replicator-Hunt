@@ -1,4 +1,4 @@
-﻿Build started 18.06.2014 22:48:17.
+﻿Build started 19.06.2014 14:23:18.
      1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\glmobj.vcxproj" on node 3 (Build target(s)).
      1>CustomBuild:
          Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt
@@ -183,4 +183,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.26
+Time Elapsed 00:00:04.69

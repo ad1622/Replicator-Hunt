@@ -1,4 +1,4 @@
-﻿Build started 18.06.2014 22:48:21.
+﻿Build started 19.06.2014 14:23:23.
      1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\exercises\common\common.vcxproj" on node 3 (Build target(s)).
      1>CustomBuild:
          Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/exercises/common/CMakeLists.txt
@@ -45,4 +45,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:11.11
+Time Elapsed 00:00:12.36
