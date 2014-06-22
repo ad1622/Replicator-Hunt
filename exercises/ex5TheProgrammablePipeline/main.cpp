@@ -23,7 +23,7 @@
 #define M_PI 3.1415926535897932384626433832795
 #define PLAYER_SPEED 0.25
 #define REPLICATOR_SPEED 0.02
-#define PROJECTILE_SPEED 0.9
+#define PROJECTILE_SPEED 0.5
 
 #define MAP_LEFT_FRONT_X 0
 #define MAP_LEFT_FRONT_Z 0
@@ -51,6 +51,7 @@ oogl::Model *vaderCape = NULL;
 oogl::Texture* tex1 = NULL;
 oogl::Texture* tex2 = NULL;
 oogl::Texture* tex3 = NULL;
+oogl::Texture* tex4 = NULL;
 
 GLuint simpleshaderprogram;
 GLuint phongshaderprogram;
@@ -67,7 +68,6 @@ bool repl_ani_dir_up = true;
 float repl_side_ud_left = 0;
 float repl_side_ud_right = 0;
 float repl_side_bf = 0;
-
 float wobbletime = 0;
 
 //gamestats
@@ -75,6 +75,7 @@ int score = 0;
 int healthpoints = 0;
 bool gamerunning = true;
 bool isinmenu = false;
+bool gameover = false;
 
 typedef struct{
 	float x, z;
@@ -102,6 +103,7 @@ void addReplicator(float x, float z, int rot);
 void RemoveProjectile(int index);
 void removeReplicator(int index);
 void initgame();
+void renderCellStrip(int length, float width, float depth, oogl::Texture* tex);
 
 void initSimpleShader()
 {
@@ -179,6 +181,7 @@ void init() {
 	tex1 = oogl::loadTexture("models/Gravel.png");
 	tex2 = oogl::loadTexture("models/ReplBlock.jpg");
 	tex3 = oogl::loadTexture("models/Concrete.png");
+	tex4 = oogl::loadTexture("models/oak.png");
 
 
 
@@ -200,6 +203,8 @@ void init() {
 void initgame(){
 	isinmenu = false;
 	gamerunning = true;
+	gameover = false;
+	healthpoints = 100;
 
 	int i;
 	if (ProjectileCount != 0)
@@ -231,6 +236,7 @@ void cleanup() {
 	delete tex1;
 	delete tex2;
 	delete tex3;
+	delete tex4;
 
 	if (simpleshaderprogram > 0)
 		glDeleteProgram(simpleshaderprogram);
@@ -238,7 +244,6 @@ void cleanup() {
 	if (phongshaderprogram > 0)
 		glDeleteProgram(phongshaderprogram);
 }
-
 
 void renderLightSphere(float lcolor[]) {
 	glDisable(GL_LIGHTING); //temporary disable lightning
@@ -485,7 +490,18 @@ void drawMenu(){
 	glPopMatrix();
 	glUseProgram(0);
 	glPushMatrix();
-	print(-0.15, 0.35, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "Return to Game");
+
+	if (gameover){
+		if (healthpoints <= 0)
+		print(-0.5, 0.6, 0, 0, 0, GLUT_BITMAP_HELVETICA_18, "Game over, your score is: %d", score);
+		else
+		print(-0.5, 0.6, 0, 0, 0, GLUT_BITMAP_HELVETICA_18, "You Won, your score is: %d", score);
+		print(-0.15, 0.35, 0.5, 0.5, 0.5, GLUT_BITMAP_HELVETICA_18, "Return to Game");
+	}
+	else{
+		print(-0.15, 0.35, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "Return to Game");
+	}
+	
 	print(-0.075, -0.025, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "Restart");
 	print(-0.05, -0.4, 1, 1, 1, GLUT_BITMAP_HELVETICA_18, "Exit");
 
@@ -625,7 +641,7 @@ void setMapMaterial() {
 
 	float ambient[] = { .2f, 0.2, 0.2, 1.0f };
 	float diffuse[] = { 0.65, 0.65, 0.65, 1.0f };
-	float specular[] = { 0.3, 0.3, 0.3, 1.0f };
+	float specular[] = { 0.15, 0.15, 0.15, 1.0f };
 	float emission[] = { .0f, .0f, .0f, 1.0f };
 
 	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, ambient);
@@ -633,6 +649,45 @@ void setMapMaterial() {
 	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, specular);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, emission);
 	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, 155.0);
+}
+
+void setSlingMaterial() {
+
+	float zero[] = { 0.0f, 0.0f, 0.0f, 1.0f };
+
+	float ambient[] = { 1.0f, 1.0, 1.0, 1.0f };
+	float diffuse[] = { 0.85, 0.85, 0.85, 1.0f };
+	float specular[] = { 0.03, 0.03, 0.03, 1.0f };
+	float emission[] = { .0f, .0f, .0f, 1.0f };
+
+	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, ambient);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, diffuse);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, specular);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, emission);
+	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, 155.0);
+}
+
+void rendersling(){
+	glPushMatrix();
+	glTranslatef(0.25, -0.1, 0.1);
+	glRotatef(90, 0, 1, 0);
+	glScalef(0.02,0.02,0.02);
+
+	renderCellStrip(3, 1, 1, tex4);
+
+	glPushMatrix();
+	glRotatef(45,0,0,1);
+	glTranslatef(2,2,0);
+	renderCellStrip(2, 1, 1, tex4);
+	glPopMatrix();
+
+	glPushMatrix();
+	glRotatef(315, 0, 0, 1);
+	glTranslatef(-2, 2, 0);
+	renderCellStrip(2, 1, 1, tex4);
+	glPopMatrix();
+
+	glPopMatrix();
 }
 
 //PROJECTILE STUFF
@@ -668,9 +723,9 @@ void moveProjectiles(){
 	for (i = 0; i < PROJECTILE_MAX; i++){
 		if (Projectiles[i] != NULL){
 			//@TODO
-			Projectiles[i]->x += REPLICATOR_SPEED*cosf(Projectiles[i]->rot*M_PI / 180.0);
-			Projectiles[i]->z += REPLICATOR_SPEED*sinf(Projectiles[i]->rot*M_PI / 180.0);
-			Projectiles[i]->y -= REPLICATOR_SPEED*sinf(Projectiles[i]->tilt*M_PI / 180.0);
+			Projectiles[i]->x += PROJECTILE_SPEED*cosf(Projectiles[i]->rot*M_PI / 180.0);
+			Projectiles[i]->z += PROJECTILE_SPEED*sinf(Projectiles[i]->rot*M_PI / 180.0);
+			Projectiles[i]->y -= PROJECTILE_SPEED*sinf(Projectiles[i]->tilt*M_PI / 180.0);
 		}
 	}
 }
@@ -747,9 +802,21 @@ void replicatorLogic(){
 					Replicators[i]->rot = 180 - asinf(newx / dist)*180.0 / M_PI;
 				}
 			}
+			else if (dist < 0.2 && repl_ani_dir_up){
+				healthpoints--;
+				if (healthpoints == 0){
+					gameover = true;
+					isinmenu = true;
+				}
+			}
 
 			Replicators[i]->x += REPLICATOR_SPEED*sinf(Replicators[i]->rot*M_PI / 180.0);
 			Replicators[i]->z += REPLICATOR_SPEED*cosf(Replicators[i]->rot*M_PI / 180.0);
+
+			if (Replicators[i]->x < 0)Replicators[i]->x = 0;
+			else if (Replicators[i]->x > 64) Replicators[i]->x = 64;
+			if (Replicators[i]->z < 0)Replicators[i]->z = 0;
+			else if (Replicators[i]->z > 64) Replicators[i]->z = 64;
 
 		}
 	}
@@ -767,6 +834,10 @@ void detectCollisions(){
 						RemoveProjectile(j);
 						removeReplicator(i);
 						score++;
+						if (ReplicatorCount == 0){
+							gameover = true;
+							isinmenu = true;
+						}
 					}
 				}
 			}
@@ -790,7 +861,7 @@ void setReplMaterial() {
 	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, 32.0);
 }
 
-void renderCellStrip(int length, float width, float depth){
+void renderCellStrip(int length, float width, float depth, oogl::Texture* tex){
 
 	float hinten, vorne, links, rechts, oben, unten;
 	vorne = depth*0.5;
@@ -805,7 +876,7 @@ void renderCellStrip(int length, float width, float depth){
 	glColorMaterial(GL_FRONT_AND_BACK, GL_DIFFUSE); //use the vertex color as diffuse color
 	glEnable(GL_TEXTURE_2D); //enable texturing
 
-	tex2->bind(5);
+	tex->bind(5);
 
 	glColor4f(0.5, 0.5, 0.5, 1);
 
@@ -889,7 +960,7 @@ void renderCellStrip(int length, float width, float depth){
 	glVertex3f(rechts, unten, vorne);
 	glEnd();
 
-	tex2->unbind();
+	tex->unbind();
 
 	//disable enabled features again
 	glDisable(GL_TEXTURE_2D);
@@ -903,19 +974,19 @@ void renderCellStrip(int length, float width, float depth){
 void renderReplicatorLeg(int alpha, int beta, int gamma){
 	glPushMatrix();
 	glRotatef(-90, 0, 0, 1);
-	renderCellStrip(3, 1, 1);
+	renderCellStrip(3, 1, 1, tex2);
 
 	glRotatef(alpha, 0, 0, 1);
 	glTranslatef(0, 0, 0);
-	renderCellStrip(2, 1, 1);
+	renderCellStrip(2, 1, 1, tex2);
 
 	glTranslatef(0, 2, 0);
 	glRotatef(180 - beta, 0, 0, 1);
-	renderCellStrip(6, 1, 1);
+	renderCellStrip(6, 1, 1, tex2);
 
 	glTranslatef(0, 6, 0);
 	glRotatef(180 - gamma, 0, 0, 1);
-	renderCellStrip(3, 1, 1);
+	renderCellStrip(3, 1, 1, tex2);
 
 	//disable enabled features again
 
@@ -928,7 +999,7 @@ void renderReplicator(Replicator * repl){
 	glTranslatef(repl->x, 0.25, repl->z);
 	glRotatef(repl->rot + 180, 0, 1, 0);
 	glScalef(.05, .05f, .05f);
-	renderCellStrip(3, 5, 7);
+	renderCellStrip(3, 5, 7, tex2);
 
 	//side left
 	glPushMatrix();
@@ -966,7 +1037,6 @@ void renderReplicator(Replicator * repl){
 	glPopMatrix();
 }
 
-
 void renderReplicators(){
 	int i;
 
@@ -978,7 +1048,6 @@ void renderReplicators(){
 }
 
 //DISPLAY
-
 /**
 * called when a frame should be rendered
 */
@@ -992,6 +1061,14 @@ void display() {
 		// set vantage point
 		gluLookAt(0.0, 0.0, 0.0, 4.0, 0.0, 0.0, 0.0, 1.0, 0.0);
 
+		glUseProgram(phongshaderprogram);
+		glUniform4f(glGetUniformLocation(phongshaderprogram, "mycolor"), 1.0, 1.0, 1.0, 1.0);
+		glUniform1i(glGetUniformLocation(phongshaderprogram, "mytexture"), 5);
+		glUniform1i(glGetUniformLocation(phongshaderprogram, "enablespot"), enableflashlight);
+
+		setSlingMaterial();
+		rendersling();
+
 		// add rotation
 		//rotation z(neigung)
 		glRotatef(rotationX, 0.0f, 0.0f, 1.0f);
@@ -1002,11 +1079,9 @@ void display() {
 		glTranslatef(eyeX, -1.5, eyeZ);
 
 		// set specific light properties
+		glUseProgram(0);
 		setLights();
 		glUseProgram(phongshaderprogram);
-		glUniform4f(glGetUniformLocation(phongshaderprogram, "mycolor"), 1.0, 1.0, 1.0, 1.0);
-		glUniform1i(glGetUniformLocation(phongshaderprogram, "mytexture"), 5);
-		glUniform1i(glGetUniformLocation(phongshaderprogram, "enablespot"), enableflashlight);
 
 		//renders all axisting replicators
 		renderReplicators();
@@ -1099,6 +1174,10 @@ void special(int key, int x, int y) {
 			eyeX -= PLAYER_SPEED*cosf((rotationY + 90.0)*M_PI / 180.0);
 			break;
 	}
+	if (eyeX > 0)eyeX = 0;
+	else if (eyeX < -64) eyeX = -64;
+	if (eyeZ > 0)eyeZ = 0;
+	else if (eyeZ < -64) eyeZ = 64;
 }
 
 /**
@@ -1117,7 +1196,7 @@ void mouse(int button, int state, int x, int y) {
 		}
 		else{
 			if (x <= glutGet(GLUT_WINDOW_WIDTH)*0.75 && x >= glutGet(GLUT_WINDOW_WIDTH)*0.25){
-				if (y <= glutGet(GLUT_WINDOW_HEIGHT)*0.375 && y >= glutGet(GLUT_WINDOW_HEIGHT)*0.25){
+				if (y <= glutGet(GLUT_WINDOW_HEIGHT)*0.375 && y >= glutGet(GLUT_WINDOW_HEIGHT)*0.25 && !gameover){
 					glutWarpPointer(glutGet(GLUT_WINDOW_WIDTH)*0.5, glutGet(GLUT_WINDOW_HEIGHT)*0.5);
 					isinmenu = false;
 					glutPostRedisplay();

@@ -1,11 +1,11 @@
-﻿Der Buildvorgang wurde am 22.06.2014 16:32:04 gestartet.
-     1>Projekt "C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\ALL_BUILD.vcxproj" auf Knoten "2", Build Ziel(e).
+﻿Build started 22.06.2014 18:18:01.
+     1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\ALL_BUILD.vcxproj" on node 2 (Build target(s)).
      1>CustomBuild:
-         Building Custom Rule C:/Users/ap/Documents/GitHub/Replicator-Hunt/CMakeLists.txt
-         CMake does not need to re-run because C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\generate.stamp is up-to-date.
+         Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/CMakeLists.txt
+         CMake does not need to re-run because D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\CMakeFiles\generate.stamp is up-to-date.
          Build all projects
-     1>Die Erstellung des Projekts "C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\ALL_BUILD.vcxproj" ist abgeschlossen, Build Ziel(e).
+     1>Done Building Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\ALL_BUILD.vcxproj" (Build target(s)).
 
-Build erfolgreich.
+Build succeeded.
 
-Verstrichene Zeit 00:00:00.13
+Time Elapsed 00:00:00.31

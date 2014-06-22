@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{83B441AB-756A-4539-9197-EAA47E1F80EB}</ProjectGUID>
+    <ProjectGUID>{31AAAA95-B850-4E82-BAD1-C25C0DE4661C}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>glmobj</ProjectName>
@@ -29,25 +29,25 @@
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -57,26 +57,26 @@
   <PropertyGroup Label="UserMacros" />
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\lib\Debug\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\lib\Debug\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">glmobj.dir\Debug\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">glmobjd</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\lib\Release\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\lib\Release\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">glmobj.dir\Release\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">glmobj</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\lib\MinSizeRel\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\lib\MinSizeRel\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">glmobj.dir\MinSizeRel\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">glmobj</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\lib\RelWithDebInfo\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\lib\RelWithDebInfo\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">glmobj.dir\RelWithDebInfo\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">glmobj</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -93,10 +93,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;HAVE_DEVIL;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -106,7 +106,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -122,10 +122,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_DEVIL;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -135,7 +135,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -151,10 +151,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_DEVIL;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -164,7 +164,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -180,10 +180,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_DEVIL;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -193,9 +193,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\external\glm-obj-0.3.1\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/ap/Documents/GitHub/Replicator-Hunt -BC:/Users/ap/Documents/GitHub/Replicator-Hunt/build --check-stamp-file C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/Users/Dominik/Documents/GitHub/Replicator-Hunt -BD:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build --check-stamp-file D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -203,12 +203,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\ap\Documents\GitHub\Replicator-Hunt\cmake\modules\FindDevIL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\cmake\modules\FindDevIL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/ap/Documents/GitHub/Replicator-Hunt -BC:/Users/ap/Documents/GitHub/Replicator-Hunt/build --check-stamp-file C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/Users/Dominik/Documents/GitHub/Replicator-Hunt -BD:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build --check-stamp-file D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -216,12 +216,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\ap\Documents\GitHub\Replicator-Hunt\cmake\modules\FindDevIL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\cmake\modules\FindDevIL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/ap/Documents/GitHub/Replicator-Hunt -BC:/Users/ap/Documents/GitHub/Replicator-Hunt/build --check-stamp-file C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/Users/Dominik/Documents/GitHub/Replicator-Hunt -BD:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build --check-stamp-file D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -229,12 +229,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\ap\Documents\GitHub\Replicator-Hunt\cmake\modules\FindDevIL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\cmake\modules\FindDevIL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/ap/Documents/GitHub/Replicator-Hunt -BC:/Users/ap/Documents/GitHub/Replicator-Hunt/build --check-stamp-file C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/Users/Dominik/Documents/GitHub/Replicator-Hunt -BD:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build --check-stamp-file D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -242,8 +242,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\ap\Documents\GitHub\Replicator-Hunt\cmake\modules\FindDevIL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/glm-obj-0.3.1/CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\cmake\modules\FindDevIL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\glm-obj-0.3.1\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
@@ -260,8 +260,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="..\..\..\external\glm-obj-0.3.1\glm\glm_util.cpp"  />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/ZERO_CHECK.vcxproj">
-      <Project>9501391D-F570-4119-91BC-78E9EE6AA3FA</Project>
+    <ProjectReference Include="D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/ZERO_CHECK.vcxproj">
+      <Project>15DC66E8-5CD3-41E2-9B29-74CFF5513988</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

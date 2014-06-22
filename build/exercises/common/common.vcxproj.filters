@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="..\..\..\exercises\common\oogl\DisplayList.cpp">
       <Filter>oogl</Filter>
@@ -111,13 +111,13 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="oogl\model">
-      <UniqueIdentifier>{59332E61-7688-4229-A796-14EA49CF9EC8}</UniqueIdentifier>
+      <UniqueIdentifier>{27717822-7653-4282-845B-C7BD24D2DC44}</UniqueIdentifier>
     </Filter>
     <Filter Include="oogl">
-      <UniqueIdentifier>{A6F74D86-6F6A-453C-A965-9F3AF050AE4F}</UniqueIdentifier>
+      <UniqueIdentifier>{2153C71F-549C-4888-B072-056BF8E6DA1C}</UniqueIdentifier>
     </Filter>
     <Filter Include="utils">
-      <UniqueIdentifier>{34380697-A9E2-4438-A8B0-54DD2A908AF4}</UniqueIdentifier>
+      <UniqueIdentifier>{0FF37738-1AE0-4180-A935-B1EDB30DA770}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

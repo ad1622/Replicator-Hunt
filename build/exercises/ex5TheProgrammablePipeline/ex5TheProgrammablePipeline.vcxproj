@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{922CAC6F-7C9B-448B-8BD7-6270F90C765C}</ProjectGUID>
+    <ProjectGUID>{234004F8-AD51-4BE4-9457-03A1096EE6B5}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>ex5TheProgrammablePipeline</ProjectName>
@@ -29,25 +29,25 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -57,25 +57,25 @@
   <PropertyGroup Label="UserMacros" />
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\bin\Debug\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\bin\Debug\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ex5TheProgrammablePipeline.dir\Debug\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ex5TheProgrammablePipelined</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\bin\Release\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\bin\Release\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ex5TheProgrammablePipeline.dir\Release\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ex5TheProgrammablePipeline</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\bin\MinSizeRel\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\bin\MinSizeRel\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">ex5TheProgrammablePipeline.dir\MinSizeRel\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">ex5TheProgrammablePipeline</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\bin\RelWithDebInfo\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\bin\RelWithDebInfo\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">ex5TheProgrammablePipeline.dir\RelWithDebInfo\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">ex5TheProgrammablePipeline</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
@@ -84,7 +84,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\common;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\common;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -101,10 +101,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\common;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\common;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\common;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\common;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -114,10 +114,10 @@
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\external\freeglut-2.8.1\lib\freeglutD.lib;..\..\lib\Debug\commond.lib;glu32.lib;opengl32.lib;..\..\lib\Debug\GLeed.lib;glu32.lib;opengl32.lib;..\..\lib\Debug\lib3ds-2_0d.lib;..\..\..\external\DevIL-1.7.8\lib\DevIL.lib;..\..\..\external\DevIL-1.7.8\lib\ILU.lib;..\..\..\external\DevIL-1.7.8\lib\ILUT.lib;..\..\lib\Debug\glmobjd.lib;glu32.lib;opengl32.lib;..\..\..\external\DevIL-1.7.8\lib\DevIL.lib;..\..\..\external\DevIL-1.7.8\lib\ILU.lib;..\..\..\external\DevIL-1.7.8\lib\ILUT.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib;C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib/$(Configuration);;C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/bin;C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/bin/$(Configuration);;C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib;C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib/$(Configuration);;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin/$(Configuration);;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/lib/Debug/ex5TheProgrammablePipelined.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/bin/Debug/ex5TheProgrammablePipelined.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/lib/Debug/ex5TheProgrammablePipelined.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin/Debug/ex5TheProgrammablePipelined.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -127,7 +127,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\common;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\common;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -143,10 +143,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\common;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\common;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\common;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\common;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -156,10 +156,10 @@
     <Link>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\external\freeglut-2.8.1\lib\freeglut.lib;..\..\lib\Release\common.lib;glu32.lib;opengl32.lib;..\..\lib\Release\GLee.lib;glu32.lib;opengl32.lib;..\..\lib\Release\lib3ds-2_0.lib;..\..\..\external\DevIL-1.7.8\lib\DevIL.lib;..\..\..\external\DevIL-1.7.8\lib\ILU.lib;..\..\..\external\DevIL-1.7.8\lib\ILUT.lib;..\..\lib\Release\glmobj.lib;glu32.lib;opengl32.lib;..\..\..\external\DevIL-1.7.8\lib\DevIL.lib;..\..\..\external\DevIL-1.7.8\lib\ILU.lib;..\..\..\external\DevIL-1.7.8\lib\ILUT.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib;C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib/$(Configuration);;C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/bin;C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/bin/$(Configuration);;C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib;C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib/$(Configuration);;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin/$(Configuration);;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <ImportLibrary>C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/lib/Release/ex5TheProgrammablePipeline.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/bin/Release/ex5TheProgrammablePipeline.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/lib/Release/ex5TheProgrammablePipeline.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin/Release/ex5TheProgrammablePipeline.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -169,7 +169,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\common;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\common;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -185,10 +185,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\common;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\common;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\common;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\common;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -198,10 +198,10 @@
     <Link>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\external\freeglut-2.8.1\lib\freeglut.lib;..\..\lib\MinSizeRel\common.lib;glu32.lib;opengl32.lib;..\..\lib\MinSizeRel\GLee.lib;glu32.lib;opengl32.lib;..\..\lib\MinSizeRel\lib3ds-2_0.lib;..\..\..\external\DevIL-1.7.8\lib\DevIL.lib;..\..\..\external\DevIL-1.7.8\lib\ILU.lib;..\..\..\external\DevIL-1.7.8\lib\ILUT.lib;..\..\lib\MinSizeRel\glmobj.lib;glu32.lib;opengl32.lib;..\..\..\external\DevIL-1.7.8\lib\DevIL.lib;..\..\..\external\DevIL-1.7.8\lib\ILU.lib;..\..\..\external\DevIL-1.7.8\lib\ILUT.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib;C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib/$(Configuration);;C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/bin;C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/bin/$(Configuration);;C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib;C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib/$(Configuration);;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin/$(Configuration);;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <ImportLibrary>C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/lib/MinSizeRel/ex5TheProgrammablePipeline.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/bin/MinSizeRel/ex5TheProgrammablePipeline.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/lib/MinSizeRel/ex5TheProgrammablePipeline.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin/MinSizeRel/ex5TheProgrammablePipeline.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -211,7 +211,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\common;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\common;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -227,10 +227,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\common;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\common;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\common;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\common;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\GLee-5.4;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -240,10 +240,10 @@
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\external\freeglut-2.8.1\lib\freeglut.lib;..\..\lib\RelWithDebInfo\common.lib;glu32.lib;opengl32.lib;..\..\lib\RelWithDebInfo\GLee.lib;glu32.lib;opengl32.lib;..\..\lib\RelWithDebInfo\lib3ds-2_0.lib;..\..\..\external\DevIL-1.7.8\lib\DevIL.lib;..\..\..\external\DevIL-1.7.8\lib\ILU.lib;..\..\..\external\DevIL-1.7.8\lib\ILUT.lib;..\..\lib\RelWithDebInfo\glmobj.lib;glu32.lib;opengl32.lib;..\..\..\external\DevIL-1.7.8\lib\DevIL.lib;..\..\..\external\DevIL-1.7.8\lib\ILU.lib;..\..\..\external\DevIL-1.7.8\lib\ILUT.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib;C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib/$(Configuration);;C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/bin;C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/bin/$(Configuration);;C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib;C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib/$(Configuration);;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin/$(Configuration);;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib;D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/lib/RelWithDebInfo/ex5TheProgrammablePipeline.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/bin/RelWithDebInfo/ex5TheProgrammablePipeline.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/lib/RelWithDebInfo/ex5TheProgrammablePipeline.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin/RelWithDebInfo/ex5TheProgrammablePipeline.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -253,9 +253,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\exercises\ex5TheProgrammablePipeline\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/ap/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/ap/Documents/GitHub/Replicator-Hunt -BC:/Users/ap/Documents/GitHub/Replicator-Hunt/build --check-stamp-file C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/Users/Dominik/Documents/GitHub/Replicator-Hunt -BD:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build --check-stamp-file D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -263,12 +263,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/ap/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline/CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline\CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\cmake\modules\FindGLUT.cmake;C:\Users\ap\Documents\GitHub\Replicator-Hunt\cmake\start.vs.bat;C:\Users\ap\Documents\GitHub\Replicator-Hunt\cmake\vs2012.vcxproj.user.in;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline/CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline\CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\cmake\modules\FindGLUT.cmake;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\cmake\start.vs.bat;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\cmake\vs2012.vcxproj.user.in;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/ap/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/ap/Documents/GitHub/Replicator-Hunt -BC:/Users/ap/Documents/GitHub/Replicator-Hunt/build --check-stamp-file C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/Users/Dominik/Documents/GitHub/Replicator-Hunt -BD:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build --check-stamp-file D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -276,12 +276,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/ap/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline/CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline\CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\cmake\modules\FindGLUT.cmake;C:\Users\ap\Documents\GitHub\Replicator-Hunt\cmake\start.vs.bat;C:\Users\ap\Documents\GitHub\Replicator-Hunt\cmake\vs2012.vcxproj.user.in;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline/CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline\CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\cmake\modules\FindGLUT.cmake;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\cmake\start.vs.bat;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\cmake\vs2012.vcxproj.user.in;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/ap/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/ap/Documents/GitHub/Replicator-Hunt -BC:/Users/ap/Documents/GitHub/Replicator-Hunt/build --check-stamp-file C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/Users/Dominik/Documents/GitHub/Replicator-Hunt -BD:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build --check-stamp-file D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -289,12 +289,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/ap/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline/CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline\CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\cmake\modules\FindGLUT.cmake;C:\Users\ap\Documents\GitHub\Replicator-Hunt\cmake\start.vs.bat;C:\Users\ap\Documents\GitHub\Replicator-Hunt\cmake\vs2012.vcxproj.user.in;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline/CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline\CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\cmake\modules\FindGLUT.cmake;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\cmake\start.vs.bat;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\cmake\vs2012.vcxproj.user.in;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/ap/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/ap/Documents/GitHub/Replicator-Hunt -BC:/Users/ap/Documents/GitHub/Replicator-Hunt/build --check-stamp-file C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/Users/Dominik/Documents/GitHub/Replicator-Hunt -BD:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build --check-stamp-file D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -302,8 +302,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/ap/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline/CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline\CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\cmake\modules\FindGLUT.cmake;C:\Users\ap\Documents\GitHub\Replicator-Hunt\cmake\start.vs.bat;C:\Users\ap\Documents\GitHub\Replicator-Hunt\cmake\vs2012.vcxproj.user.in;C:\Users\ap\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline/CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline\CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\cmake\modules\FindGLUT.cmake;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\cmake\start.vs.bat;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\cmake\vs2012.vcxproj.user.in;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
@@ -315,20 +315,20 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <None Include="..\..\..\exercises\ex5TheProgrammablePipeline\shader\simpleshader.vert" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/external/GLee-5.4/GLee.vcxproj">
-      <Project>F1E90FF1-EED7-444A-85F4-4838BDA5EF73</Project>
+    <ProjectReference Include="D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/external/GLee-5.4/GLee.vcxproj">
+      <Project>55FCDB80-FC2E-4D44-A9FC-F83E88626CDF</Project>
     </ProjectReference>
-    <ProjectReference Include="C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/ZERO_CHECK.vcxproj">
-      <Project>9501391D-F570-4119-91BC-78E9EE6AA3FA</Project>
+    <ProjectReference Include="D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/ZERO_CHECK.vcxproj">
+      <Project>15DC66E8-5CD3-41E2-9B29-74CFF5513988</Project>
     </ProjectReference>
-    <ProjectReference Include="C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/exercises/common/common.vcxproj">
-      <Project>B3B53600-0CF0-4C07-9D9E-F6E0CFA63BE6</Project>
+    <ProjectReference Include="D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/exercises/common/common.vcxproj">
+      <Project>BE3A4221-CFE7-4871-B686-778D3CCAC9AF</Project>
     </ProjectReference>
-    <ProjectReference Include="C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/external/glm-obj-0.3.1/glmobj.vcxproj">
-      <Project>83B441AB-756A-4539-9197-EAA47E1F80EB</Project>
+    <ProjectReference Include="D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/external/glm-obj-0.3.1/glmobj.vcxproj">
+      <Project>31AAAA95-B850-4E82-BAD1-C25C0DE4661C</Project>
     </ProjectReference>
-    <ProjectReference Include="C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/external/lib3ds-2.0/src/lib3ds.vcxproj">
-      <Project>A035335C-A313-4718-B93D-7A84491DC407</Project>
+    <ProjectReference Include="D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/external/lib3ds-2.0/src/lib3ds.vcxproj">
+      <Project>149BB114-88EE-4598-B3C6-4751F2942DE7</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
