@@ -23,7 +23,18 @@
 #define M_PI 3.1415926535897932384626433832795
 #define PLAYER_SPEED 0.25
 #define REPLICATOR_SPEED 0.02
-#define PROJECTILE_SPEED 0.4
+#define PROJECTILE_SPEED 0.9
+
+#define MAP_LEFT_FRONT_X 0
+#define MAP_LEFT_FRONT_Z 0
+
+#define MAP_RIGHT_BACK_X 64
+#define MAP_RIGHT_BACK_Z 64
+
+#define MAP_BOTTOM 0
+#define MAP_TOP 2
+
+
 
 int windowWidth, windowHeight;
 
@@ -197,20 +208,20 @@ void initgame(){
 				RemoveProjectile(i);
 		}
 
-	if (ReplicatorCount != 0)
-		for (i = 0; i < REPLICATOR_MAX; i++){
-			if (Replicators[i] != NULL)
-				removeReplicator(i);
-		}
+		if (ReplicatorCount != 0)
+			for (i = 0; i < REPLICATOR_MAX; i++){
+				if (Replicators[i] != NULL)
+					removeReplicator(i);
+			}
 
-	ReplicatorCount = 0;
-	ProjectileCount = 0;
+			ReplicatorCount = 0;
+			ProjectileCount = 0;
 
-	addReplicator(0, 0, 0);
-	addReplicator(0, 0, 22);
-	addReplicator(0, 0, 45);
-	addReplicator(0, 0, 68);
-	addReplicator(0, 0, 90);
+			addReplicator(0, 0, 0);
+			addReplicator(0, 0, 22);
+			addReplicator(0, 0, 45);
+			addReplicator(0, 0, 68);
+			addReplicator(0, 0, 90);
 }
 
 void cleanup() {
@@ -630,7 +641,14 @@ void addProjectile(float x, float y, float z, float tilt, float rot){
 	if (ProjectileCount < PROJECTILE_MAX)
 		for (i = 0; i < PROJECTILE_MAX; i++){
 			if (Projectiles[i] == NULL){
-				Projectiles[i] = new Projectile{ x, y, z, tilt, rot, i };
+				Projectile* p=new Projectile();
+				p->x=x;
+				p->y=y;
+				p->z=z;
+				p->tilt=tilt;
+				p->rot=rot;
+				p->index=i;
+				Projectiles[i] = p;
 				ProjectileCount++;
 				break;
 			}
@@ -656,6 +674,20 @@ void moveProjectiles(){
 		}
 	}
 }
+void removeInvalidProjectiles(){
+	//@TODO
+	int i;
+	for (i = 0; i < PROJECTILE_MAX; i++){
+		if (Projectiles[i] != NULL){
+
+			if(Projectiles[i]->x>MAP_RIGHT_BACK_X||Projectiles[i]->x<MAP_LEFT_FRONT_X||
+				Projectiles[i]->z> MAP_RIGHT_BACK_Z||Projectiles[i]->z<MAP_LEFT_FRONT_Z||
+				Projectiles[i]->y>MAP_TOP||Projectiles[i]->y<MAP_BOTTOM){
+					RemoveProjectile(i);
+			}
+		}
+	}
+}
 
 void renderProjectiles(){
 	int i;
@@ -677,7 +709,12 @@ void addReplicator(float x, float y, int rot){
 	if (ReplicatorCount < REPLICATOR_MAX)
 		for (i = 0; i < REPLICATOR_MAX; i++){
 			if (Replicators[i] == NULL){
-				Replicators[i] = new Replicator{ x, y, rot, i };
+				Replicator* r = new Replicator();
+				r->x=x;
+				r->z=y;
+				r->rot=rot;
+				r->index=i;
+				Replicators[i]=r;
 				ReplicatorCount++;
 				break;
 			}
@@ -694,12 +731,45 @@ void removeReplicator(int index){
 
 void replicatorLogic(){
 	int i;
+	float newx, newz;
+	float dist;
 	for (i = 0; i < REPLICATOR_MAX; i++){
 		if (Replicators[i] != NULL){
-			//@TODO
+			newx = -eyeX - Replicators[i]->x;
+			newz = -eyeZ - Replicators[i]->z;
+			dist = sqrtf(newx*newx+newz*newz);
+
+			if (dist > 0.5 && dist <= 10){
+				if (newz>0){
+					Replicators[i]->rot = asinf(newx / dist)*180.0 / M_PI;
+				}
+				else{
+					Replicators[i]->rot = 180 - asinf(newx / dist)*180.0 / M_PI;
+				}
+			}
+
 			Replicators[i]->x += REPLICATOR_SPEED*sinf(Replicators[i]->rot*M_PI / 180.0);
 			Replicators[i]->z += REPLICATOR_SPEED*cosf(Replicators[i]->rot*M_PI / 180.0);
 
+		}
+	}
+}
+void detectCollisions(){
+	int i,j;
+
+	for (i = 0; i < REPLICATOR_MAX; i++){
+		if (Replicators[i] != NULL){
+			Replicator* cr=Replicators[i];
+			for (j = 0; j < PROJECTILE_MAX; j++){
+				if (Projectiles[j] != NULL){
+					Projectile* cp=Projectiles[j];
+					if(abs(cp->x-cr->x)<0.5&&abs(cp->z-cr->z)<0.5){
+						RemoveProjectile(j);
+						removeReplicator(i);
+						score++;
+					}
+				}
+			}
 		}
 	}
 }
@@ -910,8 +980,8 @@ void renderReplicators(){
 //DISPLAY
 
 /**
- * called when a frame should be rendered
- */
+* called when a frame should be rendered
+*/
 void display() {
 	if (!isinmenu){
 		glutSetCursor(GLUT_CURSOR_CROSSHAIR);
@@ -962,10 +1032,10 @@ void display() {
 }
 
 /**
- * called when the window was resized
- * @param w new window width in pixel
- * @param h new window height in pixel
- */
+* called when the window was resized
+* @param w new window width in pixel
+* @param h new window height in pixel
+*/
 void reshape(int w, int h) {
 	glViewport(0, 0, w, h);
 
@@ -978,19 +1048,19 @@ void reshape(int w, int h) {
 }
 
 /**
- * called when nothing else needs to be done
- */
+* called when nothing else needs to be done
+*/
 void idle() {
 	//force a redisplay
 	glutPostRedisplay();
 }
 
 /**
- * called when the user pressed a key
- * @param key ASCII character code
- * @param x mouse x position in pixel relative to the window, when the key was pressed
- * @param y mouse y position in pixel relative to the window, when the key was pressed
- */
+* called when the user pressed a key
+* @param key ASCII character code
+* @param x mouse x position in pixel relative to the window, when the key was pressed
+* @param y mouse y position in pixel relative to the window, when the key was pressed
+*/
 
 //INPUT
 //Spiel pausiert bei p (toggelt gamerunning boolean)
@@ -1032,12 +1102,12 @@ void special(int key, int x, int y) {
 }
 
 /**
- * called when the user pressed or released a mouse key
- * @param button which mouse button was pressed, one of GLUT_LEFT_BUTTON, GLUT_MIDDLE_BUTTON and GLUT_RIGHT_BUTTON
- * @param state button pressed (GLUT_DOWN) or released(GLUT_UP)
- * @param x mouse x position in pixel relative to the window, when the mouse button was pressed
- * @param y mouse y position in pixel relative to the window, when the mouse button was pressed
- */
+* called when the user pressed or released a mouse key
+* @param button which mouse button was pressed, one of GLUT_LEFT_BUTTON, GLUT_MIDDLE_BUTTON and GLUT_RIGHT_BUTTON
+* @param state button pressed (GLUT_DOWN) or released(GLUT_UP)
+* @param x mouse x position in pixel relative to the window, when the mouse button was pressed
+* @param y mouse y position in pixel relative to the window, when the mouse button was pressed
+*/
 void mouse(int button, int state, int x, int y) {
 
 	if (leftMouseButtonDown && button == GLUT_LEFT_BUTTON && state == GLUT_UP){
@@ -1066,10 +1136,10 @@ void mouse(int button, int state, int x, int y) {
 }
 
 /**
- * called when the mouse moves (and no buttons pressed)
- * @param x mouse x position in pixel relative to the window
- * @param y mouse x position in pixel relative to the window
- */
+* called when the mouse moves (and no buttons pressed)
+* @param x mouse x position in pixel relative to the window
+* @param y mouse x position in pixel relative to the window
+*/
 void passiveMouseMotion(int x, int y) {
 	if (!isinmenu) {
 		rotationY -= glutGet(GLUT_WINDOW_WIDTH)*0.5 - x;
@@ -1109,8 +1179,10 @@ void update(int value) {
 			repl_side_bf = 25 * repl_ani_state;
 			repl_side_ud_left = 10 * (!repl_ani_dir_up ? abs(repl_ani_state) : 1) - 10;
 			repl_side_ud_right = 10 * (repl_ani_dir_up ? abs(repl_ani_state) : 1) - 10;
-
+			
 			moveProjectiles();
+			removeInvalidProjectiles();
+			detectCollisions();
 			replicatorLogic();
 		}
 	}
@@ -1159,27 +1231,27 @@ int main(int argc, char** argv) {
 
 /*Additional Examples for setting shader parameters
 
-		set uniform vec4 with vector variable:
-		float vector[] = {1, 1, 1, 1};
-		glUniform4fv(glGetUniformLocation(program,"name") ,1,vector);
+set uniform vec4 with vector variable:
+float vector[] = {1, 1, 1, 1};
+glUniform4fv(glGetUniformLocation(program,"name") ,1,vector);
 
-		or
+or
 
-		glm::vec4 gvector = glm::vec4(1.0f,1.0f,1.0f,1.0f);
-		glUniform4fv(glGetUniformLocation(program,"name") ,1,glm::value_ptr(gvector));
+glm::vec4 gvector = glm::vec4(1.0f,1.0f,1.0f,1.0f);
+glUniform4fv(glGetUniformLocation(program,"name") ,1,glm::value_ptr(gvector));
 
-		set uniform mat4 with matrix variable:
-		float matrix[] = {1, 0, 0, 0,
-		0, 1, 0, 0,
-		0, 0, 1, 0,
-		0, 0, 0, 1};
-		lUniformMatrix4fv(glGetUniformLocation(program,"name") ,1,false,matrix);
+set uniform mat4 with matrix variable:
+float matrix[] = {1, 0, 0, 0,
+0, 1, 0, 0,
+0, 0, 1, 0,
+0, 0, 0, 1};
+lUniformMatrix4fv(glGetUniformLocation(program,"name") ,1,false,matrix);
 
-		or
+or
 
-		glm::mat4 gmatrix = glm::mat4(1.0f,0.0f,0.0f,0.0f,
-		0.0f,1.0f,0.0f,0.0f,
-		0.0f,0.0f,1.0f,0.0f,
-		0.0f,0.0f,0.0f,1.0f);
-		glUniformMatrix4fv(glGetUniformLocation(program,"name") ,1,false,glm::value_ptr(gmatrix));
-		*/
+glm::mat4 gmatrix = glm::mat4(1.0f,0.0f,0.0f,0.0f,
+0.0f,1.0f,0.0f,0.0f,
+0.0f,0.0f,1.0f,0.0f,
+0.0f,0.0f,0.0f,1.0f);
+glUniformMatrix4fv(glGetUniformLocation(program,"name") ,1,false,glm::value_ptr(gmatrix));
+*/
