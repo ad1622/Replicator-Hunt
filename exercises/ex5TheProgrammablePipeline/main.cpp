@@ -34,6 +34,8 @@
 #define MAP_BOTTOM 0
 #define MAP_TOP 2
 
+#define MATERIAL_NEEDED_FOR_CLONING 3
+
 
 
 int windowWidth, windowHeight;
@@ -43,7 +45,7 @@ int mousePosX = 0, mousePosY = 0;
 // rotX = neigung, rotY = drehung
 float rotationX = 0, rotationY = 0;
 //spielerkoordinaten (negativ da verschiebung der map, müssen negiert werden um sie zu verwenden)
-float eyeX = 0, eyeZ = 0;
+float eyeX = -20, eyeZ = -20;
 
 oogl::Model *vader = NULL;
 oogl::Model *vaderCape = NULL;
@@ -80,8 +82,13 @@ bool gameover = false;
 typedef struct{
 	float x, z;
 	int rot, index;
-
+	int gathered;
 } Replicator;
+
+typedef struct{
+	float x,z;
+	int count;
+} ReplicatorBasicMaterial;
 
 typedef struct{
 	float x, y, z;
@@ -97,9 +104,14 @@ Projectile * Projectiles[25];
 int ProjectileCount;
 int PROJECTILE_MAX = 25;
 
+ReplicatorBasicMaterial* rMaterials[50];
+int rMaterialCount;
+int rMaterialMax=50;
+
 
 void cleanup();
 void addReplicator(float x, float z, int rot);
+int addRMaterial(float x,float z, int count);
 void RemoveProjectile(int index);
 void removeReplicator(int index);
 void initgame();
@@ -222,11 +234,16 @@ void initgame(){
 			ReplicatorCount = 0;
 			ProjectileCount = 0;
 
-			addReplicator(0, 0, 0);
-			addReplicator(0, 0, 22);
 			addReplicator(0, 0, 45);
-			addReplicator(0, 0, 68);
+			addReplicator(64, 64, 225);
+			addReplicator(64, 0,315);
+			addReplicator(0, 64, 135);
 			addReplicator(0, 0, 90);
+			
+			addRMaterial(5,5,100);
+			addRMaterial(50,50,100);
+
+
 }
 
 void cleanup() {
@@ -669,7 +686,7 @@ void setSlingMaterial() {
 
 void rendersling(){
 	glPushMatrix();
-	glTranslatef(0.25, -0.1, 0.1);
+	glTranslatef(0.3, -0.1, 0.1);
 	glRotatef(90, 0, 1, 0);
 	glScalef(0.02,0.02,0.02);
 
@@ -689,7 +706,49 @@ void rendersling(){
 
 	glPopMatrix();
 }
-
+int addRMaterial(float x, float z, int count){
+		int i;
+		if (rMaterialCount < rMaterialMax)
+		for (i = 0; i < rMaterialMax; i++){
+			if (rMaterials[i] == NULL){
+				ReplicatorBasicMaterial* p=new ReplicatorBasicMaterial();
+				p->x=x;
+				p->z=z;
+				p->count=count;
+				rMaterials[i] = p;
+				rMaterialCount++;
+				return i;
+			}
+		}
+}
+void RemoveRMaterial(int index){
+	if (rMaterials[index] != NULL){
+		delete(rMaterials[index]);
+		rMaterials[index] = NULL;
+		rMaterialCount--;
+	}
+}
+int createRandomRMaterial(){
+	return addRMaterial(rand()%63+1,rand()%63+1,rand()%8);
+}
+int findNearestRMaterial(float x, float z){
+int i=0,bestIndex=-1;
+float distance=64*64,newDistance;
+		for (i = 0; i < rMaterialMax; i++){
+			if (rMaterials[i] != NULL){
+				newDistance=(x-rMaterials[i]->x)*(x-rMaterials[i]->x)+(z-rMaterials[i]->z)*(z-rMaterials[i]->z);
+				if(newDistance<distance){
+					bestIndex=i;
+					distance=newDistance;
+				}
+			}
+		}
+		if(rMaterialCount<rMaterialMax){
+			if(bestIndex==-1)
+				return createRandomRMaterial();
+		}
+		return bestIndex;
+}
 //PROJECTILE STUFF
 void addProjectile(float x, float y, float z, float tilt, float rot){
 	int i;
@@ -794,15 +853,32 @@ void replicatorLogic(){
 			newz = -eyeZ - Replicators[i]->z;
 			dist = sqrtf(newx*newx+newz*newz);
 
-			if (dist > 0.5 && dist <= 10){
-				if (newz>0){
-					Replicators[i]->rot = asinf(newx / dist)*180.0 / M_PI;
+			if (!(dist > 0.5 && dist <= 10)){
+				int rMaterialIndex=findNearestRMaterial(Replicators[i]->x,Replicators[i]->z);
+				ReplicatorBasicMaterial* rMat=rMaterials[rMaterialIndex];
+				if(abs(rMat->x-Replicators[i]->x)<0.4&&abs(rMat->z-Replicators[i]->z)<0.4){
+					Replicators[i]->gathered+=rMat->count;
+					if(Replicators[i]->gathered>=MATERIAL_NEEDED_FOR_CLONING){
+						Replicators[i]->gathered-=MATERIAL_NEEDED_FOR_CLONING;
+						addReplicator(Replicators[i]->z,Replicators[i]->x,Replicators[i]->rot);
+
+					}
+					RemoveRMaterial(rMaterialIndex);
+					rMaterialIndex=findNearestRMaterial(Replicators[i]->x,Replicators[i]->z);
+					rMat=rMaterials[rMaterialIndex];
 				}
-				else{
-					Replicators[i]->rot = 180 - asinf(newx / dist)*180.0 / M_PI;
-				}
+
+				newx = rMat->x- Replicators[i]->x;
+				newz = rMat->z - Replicators[i]->z;
+				dist = sqrtf(newx*newx+newz*newz);
 			}
-			else if (dist < 0.2 && repl_ani_dir_up){
+			if (newz>0){
+				Replicators[i]->rot = asinf(newx / dist)*180.0 / M_PI;
+			}
+			else{
+				Replicators[i]->rot = 180 - asinf(newx / dist)*180.0 / M_PI;
+			}
+			if (dist < 0.2 && repl_ani_dir_up){
 				healthpoints--;
 				if (healthpoints == 0){
 					gameover = true;
@@ -1046,7 +1122,22 @@ void renderReplicators(){
 		}
 	}
 }
+void renderRMaterial(ReplicatorBasicMaterial* rMat){
+	glPushMatrix();
+	glTranslatef(rMat->x,0.25,rMat->z);
+	glScalef(.1, .1f, .1f);
+	renderCellStrip(1,1,1, tex2);
+	glPopMatrix();
+}
+void renderRMaterials(){
+	int i;
 
+	for (i = 0; i < rMaterialMax; i++){
+		if (rMaterials[i] != NULL){
+			renderRMaterial(rMaterials[i]);
+		}
+	}
+}
 //DISPLAY
 /**
 * called when a frame should be rendered
@@ -1085,6 +1176,8 @@ void display() {
 
 		//renders all axisting replicators
 		renderReplicators();
+		//renders replicator basic material
+		renderRMaterials();
 
 		//sets material for map
 		setMapMaterial();
