@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="..\..\..\..\external\lib3ds-2.0\src\lib3ds_atmosphere.c">
       <Filter>Source Files</Filter>
@@ -72,10 +72,10 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{EC8F92EA-1114-46D8-B4A8-96ADEC981E81}</UniqueIdentifier>
+      <UniqueIdentifier>{F6E96EC6-7280-447C-91AF-AF330E861FB5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{627E8F65-3F5C-4912-A0A3-FC573CEE3985}</UniqueIdentifier>
+      <UniqueIdentifier>{6969DFF5-E589-4CA8-8BA1-6D25A7524DB0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

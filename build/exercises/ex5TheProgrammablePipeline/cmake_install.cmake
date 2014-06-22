@@ -1,8 +1,8 @@
-# Install script for directory: D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline
+# Install script for directory: C:/Users/ap/Documents/GitHub/Replicator-Hunt/exercises/ex5TheProgrammablePipeline
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build")
+  SET(CMAKE_INSTALL_PREFIX "C:/Users/ap/Documents/GitHub/Replicator-Hunt/build")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

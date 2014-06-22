@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{CEDDA907-5256-4303-9BFB-B8B92A2C6519}</ProjectGUID>
+    <ProjectGUID>{A035335C-A313-4718-B93D-7A84491DC407}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>lib3ds</ProjectName>
@@ -29,25 +29,25 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -57,25 +57,25 @@
   <PropertyGroup Label="UserMacros" />
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\bin\Debug\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\bin\Debug\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">lib3ds.dir\Debug\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">lib3ds-2_0d</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\bin\Release\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\bin\Release\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">lib3ds.dir\Release\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">lib3ds-2_0</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\bin\MinSizeRel\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\bin\MinSizeRel\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">lib3ds.dir\MinSizeRel\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">lib3ds-2_0</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\bin\RelWithDebInfo\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\bin\RelWithDebInfo\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">lib3ds.dir\RelWithDebInfo\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">lib3ds-2_0</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
@@ -116,8 +116,8 @@
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/lib/Debug/lib3ds-2_0d.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin/Debug/lib3ds-2_0d.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/lib/Debug/lib3ds-2_0d.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/bin/Debug/lib3ds-2_0d.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -158,8 +158,8 @@
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <ImportLibrary>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/lib/Release/lib3ds-2_0.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin/Release/lib3ds-2_0.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/lib/Release/lib3ds-2_0.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/bin/Release/lib3ds-2_0.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -200,8 +200,8 @@
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <ImportLibrary>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/lib/MinSizeRel/lib3ds-2_0.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin/MinSizeRel/lib3ds-2_0.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/lib/MinSizeRel/lib3ds-2_0.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/bin/MinSizeRel/lib3ds-2_0.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -242,8 +242,8 @@
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/lib/RelWithDebInfo/lib3ds-2_0.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin/RelWithDebInfo/lib3ds-2_0.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/lib/RelWithDebInfo/lib3ds-2_0.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/bin/RelWithDebInfo/lib3ds-2_0.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -253,9 +253,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\..\external\lib3ds-2.0\src\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/Users/Dominik/Documents/GitHub/Replicator-Hunt -BD:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build --check-stamp-file D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/ap/Documents/GitHub/Replicator-Hunt -BC:/Users/ap/Documents/GitHub/Replicator-Hunt/build --check-stamp-file C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -263,12 +263,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src\CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src\CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/Users/Dominik/Documents/GitHub/Replicator-Hunt -BD:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build --check-stamp-file D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/ap/Documents/GitHub/Replicator-Hunt -BC:/Users/ap/Documents/GitHub/Replicator-Hunt/build --check-stamp-file C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -276,12 +276,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src\CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src\CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/Users/Dominik/Documents/GitHub/Replicator-Hunt -BD:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build --check-stamp-file D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/ap/Documents/GitHub/Replicator-Hunt -BC:/Users/ap/Documents/GitHub/Replicator-Hunt/build --check-stamp-file C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -289,12 +289,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src\CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src\CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/Users/Dominik/Documents/GitHub/Replicator-Hunt -BD:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build --check-stamp-file D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/ap/Documents/GitHub/Replicator-Hunt -BC:/Users/ap/Documents/GitHub/Replicator-Hunt/build --check-stamp-file C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -302,8 +302,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src\CMakeLists.txt;D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/ap/Documents/GitHub/Replicator-Hunt/external/lib3ds-2.0/src/CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src\CMakeLists.txt;C:\Users\ap\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\ap\Documents\GitHub\Replicator-Hunt\build\external\lib3ds-2.0\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
@@ -331,8 +331,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="..\..\..\..\external\lib3ds-2.0\src\lib3ds_viewport.c"  />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/ZERO_CHECK.vcxproj">
-      <Project>15143D15-524D-42B0-B2D3-019DCC708421</Project>
+    <ProjectReference Include="C:/Users/ap/Documents/GitHub/Replicator-Hunt/build/ZERO_CHECK.vcxproj">
+      <Project>9501391D-F570-4119-91BC-78E9EE6AA3FA</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
