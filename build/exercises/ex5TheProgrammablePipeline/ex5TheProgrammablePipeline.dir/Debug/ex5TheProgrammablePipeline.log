@@ -1,102 +1,101 @@
-﻿Build started 22.06.2014 20:58:30.
+﻿Build started 22.06.2014 22:42:58.
      1>Project "D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\exercises\ex5TheProgrammablePipeline\ex5TheProgrammablePipeline.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\ex5TheProgrammablePipeline" /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include" /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\freeglut-2.8.1\include\GL" /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\exercises\common" /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-0.9.5.2\include" /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\GLee-5.4" /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\lib3ds-2.0\src" /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include" /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\DevIL-1.7.8\include\IL" /I"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\external\glm-obj-0.3.1" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"ex5TheProgrammablePipeline.dir\Debug\\" /Fd"ex5TheProgrammablePipeline.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp
          main.cpp
      1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(191): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(356): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(374): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(352): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(373): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'vsprintf'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(399): warning C4305: 'argument' : truncation from 'double' to 'float'
      1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(400): warning C4305: 'argument' : truncation from 'double' to 'float'
      1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(401): warning C4305: 'argument' : truncation from 'double' to 'float'
      1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(402): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(403): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(511): warning C4305: 'argument' : truncation from 'double' to 'float'
      1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(513): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(515): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(516): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(519): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(522): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(523): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(582): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(584): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(586): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(596): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(598): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(514): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(517): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(520): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(521): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(559): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(561): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(563): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(573): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(575): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(577): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(585): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(587): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(591): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
      1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(600): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(608): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(610): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(602): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(604): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
      1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(614): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(623): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(625): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(627): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(636): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(640): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(642): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(659): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(660): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(661): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(676): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(677): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(689): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(691): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(732): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(785): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(785): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(786): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(786): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(787): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(787): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(876): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(879): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(889): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(889): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(890): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(890): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(928): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(929): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(930): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(943): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(945): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(947): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(964): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(968): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(978): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(982): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(992): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(996): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1005): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1009): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1055): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1060): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1064): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1076): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1077): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1102): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1110): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1128): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1148): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1254): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1254): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1255): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1255): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1258): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1258): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1259): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1259): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1262): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1262): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1263): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1263): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1266): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1266): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1267): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1267): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1293): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1317): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1318): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(618): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(620): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(637): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(638): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(639): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(654): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(655): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(668): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(670): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(718): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(778): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(778): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(779): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(779): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(780): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(780): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(846): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(890): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(893): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(897): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(897): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(898): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(898): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(939): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(940): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(941): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(955): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(957): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(959): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(976): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(980): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(990): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(994): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1004): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1008): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1017): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1021): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1066): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1071): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1075): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1088): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1089): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1114): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1122): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1143): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1166): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1276): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1276): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1277): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1277): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1280): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1280): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1281): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1281): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1284): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1284): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1285): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1285): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1288): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1288): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1289): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1289): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1318): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1342): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\exercises\ex5TheProgrammablePipeline\main.cpp(1343): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
          GLM: rotate function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
-     1>d:\users\dominik\documents\github\replicator-hunt\exercises\ex5theprogrammablepipeline\main.cpp(723): warning C4715: 'addRMaterial' : not all control paths return a value
+     1>d:\users\dominik\documents\github\replicator-hunt\exercises\ex5theprogrammablepipeline\main.cpp(705): warning C4715: 'addRMaterial' : not all control paths return a value
        Link:
          E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\bin\Debug\ex5TheProgrammablePipelined.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib" /LIBPATH:"D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/freeglut-2.8.1/lib/Debug" /LIBPATH:"D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin" /LIBPATH:"D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin/Debug" /LIBPATH:"D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib" /LIBPATH:"D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/external/DevIL-1.7.8/lib/Debug" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "..\..\..\external\freeglut-2.8.1\lib\freeglutD.lib" ..\..\lib\Debug\commond.lib glu32.lib opengl32.lib ..\..\lib\Debug\GLeed.lib glu32.lib opengl32.lib "..\..\lib\Debug\lib3ds-2_0d.lib" "..\..\..\external\DevIL-1.7.8\lib\DevIL.lib" "..\..\..\external\DevIL-1.7.8\lib\ILU.lib" "..\..\..\external\DevIL-1.7.8\lib\ILUT.lib" ..\..\lib\Debug\glmobjd.lib glu32.lib opengl32.lib "..\..\..\external\DevIL-1.7.8\lib\DevIL.lib" "..\..\..\external\DevIL-1.7.8\lib\ILU.lib" "..\..\..\external\DevIL-1.7.8\lib\ILUT.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/bin/Debug/ex5TheProgrammablePipelined.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Users/Dominik/Documents/GitHub/Replicator-Hunt/build/lib/Debug/ex5TheProgrammablePipelined.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug ex5TheProgrammablePipeline.dir\Debug\main.obj
          ex5TheProgrammablePipeline.vcxproj -> D:\Users\Dominik\Documents\GitHub\Replicator-Hunt\build\bin\Debug\ex5TheProgrammablePipelined.exe
@@ -104,4 +103,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.56
+Time Elapsed 00:00:01.41
